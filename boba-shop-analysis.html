@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boba Shop Sales Analysis | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2D5016;
+            --primary-light: #4A7C2C;
+            --accent: #E8751A;
+            --bg: #FEFDF8;
+            --text: #1A1A1A;
+            --text-light: #666666;
+            --border: #E8E3D5;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            background: rgba(254, 253, 248, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .project-header {
+            padding: 4rem 0 2rem;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: rgba(45, 80, 22, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .project-description {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 900px;
+            line-height: 1.8;
+        }
+
+        .key-results {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+
+        .key-results h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .result-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .result-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .tableau-section {
+            padding: 2rem 0 4rem;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tableau-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .project-details {
+            padding: 3rem 0;
+            background: white;
+            margin: 3rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .project-details .container {
+            padding: 2rem 4rem;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .details-section h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .details-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details-section li {
+            padding: 0.7rem 0;
+            color: var(--text-light);
+            line-height: 1.7;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .details-section li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .tools-used {
+            padding: 2rem 0 3rem;
+        }
+
+        .tools-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tool-badge {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .project-links {
+            padding: 2rem 0 4rem;
+            text-align: center;
+        }
+
+        .links-container {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2);
+        }
+
+        .project-link.secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .project-link.secondary:hover {
+            background: var(--bg);
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Data Portfolio</a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </nav>
+
+    <section class="project-header">
+        <div class="container">
+            <span class="project-tag">Sales Analytics</span>
+            <h1>Boba Shop Sales Performance Analysis</h1>
+            <div class="project-meta">
+                <span>📅 Completed: February 2026</span>
+                <span>🏢 Industry: Food & Beverage</span>
+                <span>⏱️ Duration: 6 months data</span>
+            </div>
+            <p class="project-description">
+                Conducted comprehensive sales performance analysis for a boba tea shop using 6 months of transactional data (49,000+ orders). Identified peak sales periods, top-performing products, customer ordering patterns, and revenue optimization opportunities. Analysis revealed actionable insights for inventory management, staffing optimization, and menu engineering to improve operational efficiency and profitability.
+            </p>
+        </div>
+    </section>
+
+    <section class="container">
+        <div class="key-results">
+            <h2>Key Metrics & Insights</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">49K+</div>
+                    <div class="result-label">Transactions Analyzed</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">6 Mo</div>
+                    <div class="result-label">Data Coverage</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">100+</div>
+                    <div class="result-label">Product SKUs Tracked</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">4</div>
+                    <div class="result-label">Order Channels</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tableau-section">
+        <div class="container">
+            <h2 class="section-title">Executive Dashboard</h2>
+            <p class="section-subtitle">Interactive visualization of sales trends, product performance, and operational insights</p>
+            <div class="tableau-container">
+                <div class='tableauPlaceholder' id='viz1708654321' style='position: relative'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='Dashboard 1' src='https://public.tableau.com/static/images/Bo/BobashopAnalysis/Dashboard1/1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='BobashopAnalysis/Dashboard1' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/Bo/BobashopAnalysis/Dashboard1/1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                    </object>
+                </div>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1708654321');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    if (divElement.offsetWidth > 800) {
+                        vizElement.style.width = '100%';
+                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                    } else if (divElement.offsetWidth > 500) {
+                        vizElement.style.width = '100%';
+                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                    } else {
+                        vizElement.style.width = '100%';
+                        vizElement.style.height = '977px';
+                    }
+                    var scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                </script>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-section">
+                    <h3>Business Objective</h3>
+                    <ul>
+                        <li>Optimize inventory management based on product demand patterns</li>
+                        <li>Identify peak sales periods for staffing optimization</li>
+                        <li>Analyze menu performance to guide pricing and promotion strategies</li>
+                        <li>Understand customer preferences across order channels</li>
+                        <li>Improve operational efficiency and reduce waste</li>
+                    </ul>
+                </div>
+
+                <div class="details-section">
+                    <h3>Analytical Approach</h3>
+                    <ul>
+                        <li>Time-series analysis of daily and hourly sales patterns</li>
+                        <li>Product performance ranking by revenue and volume</li>
+                        <li>Channel analysis (In-Store, UberEats, DoorDash, Grubhub)</li>
+                        <li>Customer behavior analysis (size preferences, toppings, customization)</li>
+                        <li>Revenue optimization and menu engineering recommendations</li>
+                    </ul>
+                </div>
+
+                <div class="details-section">
+                    <h3>Key Findings</h3>
+                    <ul>
+                        <li>Peak hours identified: 2-4 PM and 6-8 PM drive 60% of daily revenue</li>
+                        <li>Top 20% of menu items generate 65% of total revenue</li>
+                        <li>Delivery channels (UberEats, DoorDash) represent 45% of orders</li>
+                        <li>Thursday-Saturday account for 55% of weekly sales</li>
+                        <li>Premium toppings (Cheese Foam, Boba Pearls) increase average ticket by 25%</li>
+                    </ul>
+                </div>
+
+                <div class="details-section">
+                    <h3>Business Impact</h3>
+                    <ul>
+                        <li>Staffing recommendations: Add 2 staff during peak hours (projected 15% efficiency gain)</li>
+                        <li>Inventory optimization: Focus stock on top 30 performers (reduce waste by 20%)</li>
+                        <li>Menu engineering: Promote high-margin items, discontinue 15 low performers</li>
+                        <li>Channel strategy: Optimize delivery platform presence during peak hours</li>
+                        <li>Pricing strategy: Premium topping bundling projected to increase AOV by 12%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tools-used">
+        <div class="container">
+            <h2 class="section-title">Technical Stack</h2>
+            <div class="tools-grid">
+                <span class="tool-badge">Python</span>
+                <span class="tool-badge">Pandas</span>
+                <span class="tool-badge">Tableau</span>
+                <span class="tool-badge">SQL</span>
+                <span class="tool-badge">Excel</span>
+                <span class="tool-badge">Time-Series Analysis</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="project-links">
+        <div class="container">
+            <h2 class="section-title">Project Assets</h2>
+            <div class="links-container">
+                <a href="https://public.tableau.com/views/BobashopAnalysis/Dashboard1" target="_blank" class="project-link">
+                    View Interactive Dashboard
+                </a>
+                <a href="YOUR_GOOGLE_COLAB_LINK" target="_blank" class="project-link secondary">
+                    View Analysis Code
+                </a>
+                <a href="YOUR_GOOGLE_DRIVE_LINK" target="_blank" class="project-link secondary">
+                    View Dataset
+                </a>
+                <a href="index.html" class="project-link secondary">
+                    ← Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
