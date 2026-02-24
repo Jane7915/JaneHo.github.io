@@ -231,6 +231,56 @@
             100% { transform: translate(50px, 50px); }
         }
 
+        .project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.08);
+}
+
+.project-image::after {
+    content: '🔍 View Project';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(45, 80, 22, 0.85);
+    color: white;
+    font-size: 1.3rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.project-card:hover .project-image::after {
+    opacity: 1;
+}
+
+.image-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: #E8751A;
+    color: white;
+    padding: 0.4rem 0.9rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 12px rgba(232, 117, 26, 0.4);
+    z-index: 10;
+}
+        
         .project-content {
             padding: 2rem;
         }
@@ -561,8 +611,26 @@
             <div class="projects-grid">
                 <!-- Project 1 -->
                 <div class="project-card" onclick="window.location.href='boba-shop-analysis.html'" style="cursor: pointer;">
-                    🧋
-                    </div>
+    <div class="project-image">
+        <img src="images/Boba%20Shop%20Analysis.png" 
+             alt="Boba Shop Sales Dashboard" 
+             loading="lazy">
+        <span class="image-badge">NEW</span>
+    </div>
+    <div class="project-content">
+        <span class="project-tag">Sales Analysis</span>
+        <h3 class="project-title">Boba Shop Sales Performance Analysis</h3> 
+        <p class="project-description">
+            Analyzed 49,000+ transactions across 6 months to optimize inventory, staffing, and menu performance. Identified peak hours driving 60% of daily revenue and top products generating 65% of sales, delivering actionable recommendations for operational efficiency.
+        </p>
+        <div class="project-tools">
+            <span class="tool-badge">Python</span>
+            <span class="tool-badge">Pandas</span>
+            <span class="tool-badge">Tableau</span>
+            <span class="tool-badge">SQL</span>
+        </div>
+    </div>
+</div>
                     <div class="project-content">
                         <span class="project-tag">Sales Analysis</span>
                         <h3 class="project-title">Boba Shop Sales Performance Analysis</h3> 
