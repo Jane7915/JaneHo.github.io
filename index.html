@@ -212,6 +212,12 @@
             overflow: hidden;
             background-size: cover;
             background-position: center;
+            transition: transform 0.5s ease;
+        }
+
+        /* Image zooms out on hover */
+        .project-card:hover .project-image {
+            transform: scale(1.1);
         }
 
         .project-image::before {
@@ -234,7 +240,7 @@
             100% { transform: translate(50px, 50px); }
         }
 
-        /* Hover overlay - hidden by default, shows on hover */
+        /* Hover overlay - hidden by default, zooms in on hover */
         .project-overlay {
             position: absolute;
             top: 0;
@@ -243,7 +249,8 @@
             bottom: 0;
             background: rgba(45, 80, 22, 0.95);
             opacity: 0;
-            transition: opacity 0.3s ease;
+            transform: scale(0.8);
+            transition: all 0.4s ease;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -251,8 +258,10 @@
             z-index: 10;
         }
 
+        /* Overlay zooms in and fades in on hover */
         .project-card:hover .project-overlay {
             opacity: 1;
+            transform: scale(1);
         }
 
         .project-overlay .project-tag {
