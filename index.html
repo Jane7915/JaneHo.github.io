@@ -231,6 +231,779 @@
             100% { transform: translate(50px, 50px); }
         }
 
+        .project-content {
+            padding: 2rem;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: rgba(45, 80, 22, 0.1);
+            color: var(--primary);
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .project-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.6rem;
+            color: var(--primary);
+            margin-bottom: 0.8rem;
+            font-weight: 600;
+        }
+
+        .project-description {
+            color: var(--text-light);
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-tools {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .tool-badge {
+            background: var(--bg);
+            color: var(--text);
+            padding: 0.3rem 0.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            border: 1px solid var(--border);
+        }
+
+        /* About Section */
+        .about {
+            background: linear-gradient(to bottom, var(--bg) 0%, rgba(45, 80, 22, 0.02) 100%);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .about-text h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .about-text p {
+            color: var(--text-light);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .skills-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+
+        .skill-item {
+            background: var(--card-bg);
+            padding: 1.2rem;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .skill-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(45, 80, 22, 0.1);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .skill-name {
+            font-weight: 600;
+            color: var(--text);
+        }
+
+        /* Contact Section */
+        .contact {
+            background: var(--primary);
+            color: white;
+        }
+
+        .contact .section-tag {
+            color: var(--accent);
+        }
+
+        .contact .section-title,
+        .contact .section-description {
+            color: white;
+        }
+
+        .contact-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            margin-top: 3rem;
+        }
+
+        .contact-info h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .contact-methods {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .contact-method-info h4 {
+            font-weight: 600;
+            margin-bottom: 0.3rem;
+        }
+
+        .contact-method-info a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .contact-method-info a:hover {
+            color: white;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-family: 'Nunito', sans-serif;
+            font-size: 1rem;
+        }
+
+        .form-group input::placeholder,
+        .form-group textarea::placeholder {
+            color: rgba(255, 255, 255, 0.5);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .submit-button {
+            width: 100%;
+            background: white;
+            color: var(--primary);
+            padding: 1rem;
+            border: none;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .submit-button:hover {
+            background: var(--bg);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--text);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .section-title {
+                font-size: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .about-content,
+            .contact-content {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .skills-list {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+        }
+
+        /* Coming Soon Badge */
+        .coming-soon {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: var(--accent);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="container">
+            <div class="logo">Data Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>Data-Driven<br>Business Insights</h1>
+            <p class="subtitle">Turning complex data into actionable solutions</p>
+            <p class="description">
+                I help businesses, especially in food and service industries, make smarter operational decisions through data analytics. Combining real-world industry experience with analytical skills, I turn raw data into clear strategies that improve sales, efficiency, and customer experience.
+            </p>
+            <a href="#contact" class="cta-button">Let's Work Together</a>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Portfolio</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-description">
+                    Real-world data analysis projects showcasing skills in visualization, statistical analysis, and business intelligence across various industries.
+                </p>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" onclick="window.location.href='boba-shop-analysis.html'" style="cursor: pointer;">
+                    <div class="project-image" style="background: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 100%);">
+                        🧋
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Sales Analytics</span>
+                        <h3 class="project-title">Boba Shop Sales Performance Analysis</h3>
+                        <p class="project-description">
+                            Analyzed 49,000+ transactions across 6 months to optimize inventory, staffing, and menu performance. Identified peak hours driving 60% of daily revenue and top products generating 65% of sales, delivering actionable recommendations for operational efficiency.
+                        </p>
+                        <div class="project-tools">
+                            <span class="tool-badge">Python</span>
+                            <span class="tool-badge">Pandas</span>
+                            <span class="tool-badge">Tableau</span>
+                            <span class="tool-badge">SQL</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" onclick="window.location.href='ramen-feasibility.html'" style="cursor: pointer;">
+                    <div class="project-image" style="background: linear-gradient(135deg, #FF6B6B 0%, #C44569 100%);">
+                        🍜
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Market Research</span>
+                        <h3 class="project-title">Seattle Ramen Shop Location Feasibility Study</h3>
+                        <p class="project-description">
+                            Conducted neighborhood analysis for startup ramen restaurant launch in Seattle. Evaluated demographics, income levels, population density, and competition across all neighborhoods to identify optimal locations aligned with target market (young professionals, $75K+ income). Delivered top 5 location recommendations with risk assessment.
+                        </p>
+                        <div class="project-tools">
+                            <span class="tool-badge">Python</span>
+                            <span class="tool-badge">Tableau</span>
+                            <span class="tool-badge">Census Data</span>
+                            <span class="tool-badge">Excel</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" onclick="window.location.href='customer-segmentation.html'" style="cursor: pointer;">
+                    <div class="project-image" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);">
+                        🎯
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Customer Analytics</span>
+                        <h3 class="project-title">E-Commerce Customer Segmentation Strategy</h3>
+                        <p class="project-description">
+                            Delivered actionable customer segmentation framework for e-commerce client using RFM methodology and K-means clustering. Analysis of 2,000+ customer records revealed high-value segments driving 53% of revenue, enabling targeted retention strategies projected to increase CLV by 20%.
+                        </p>
+                        <div class="project-tools">
+                            <span class="tool-badge">Python</span>
+                            <span class="tool-badge">Scikit-learn</span>
+                            <span class="tool-badge">Tableau</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card">
+                    <div class="project-image">
+                        <span class="coming-soon">Coming Soon</span>
+                        📦
+                    </div>
+                    <div class="project-content">
+                        <span class="project-tag">Operations</span>
+                        <h3 class="project-title">Supply Chain Optimization Analysis</h3>
+                        <p class="project-description">
+                            Analyzed inventory turnover rates and delivery patterns to identify bottlenecks, creating optimization recommendations that reduced costs and improved delivery times.
+                        </p>
+                        <div class="project-tools">
+                            <span class="tool-badge">Excel</span>
+                            <span class="tool-badge">Python</span>
+                            <span class="tool-badge">SQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">Industry Experience Meets Data Skills</h2>
+            </div>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Data analyst with real-world business experience</h3>
+                    <p>
+                        I bring a unique combination of technical data skills and practical business operations experience. Currently managing a boba tea shop, I understand the challenges business owners face and know how to translate data insights into actionable improvements.
+                    </p>
+                    <p>
+                        Whether you need help understanding sales patterns, optimizing operations, analyzing customer behavior, or making data-driven decisions, I can help. I work with businesses across industries to turn their data into competitive advantages.
+                    </p>
+                    <p>
+                        My approach is practical and results-focused. I don't just deliver charts and numbers—I provide clear insights and recommendations that you can actually implement to improve your business.
+                    </p>
+                </div>
+
+                <div class="skills-grid">
+                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; color: var(--primary); margin-bottom: 1.5rem; font-weight: 600;">Technical Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-item">
+                            <div class="skill-icon">🐍</div>
+                            <div class="skill-name">Python</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📊</div>
+                            <div class="skill-name">Tableau</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">💾</div>
+                            <div class="skill-name">SQL</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📈</div>
+                            <div class="skill-name">Excel</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">📉</div>
+                            <div class="skill-name">Statistics</div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">🎨</div>
+                            <div class="skill-name">Data Viz</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's Discuss Your Project</h2>
+                <p class="section-description">
+                    Need help with data analysis for your business? I'd love to discuss how I can help you make better decisions with your data.
+                </p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="contact-icon">📧</div>
+                            <div class="contact-method-info">
+                                <h4>Email</h4>
+                                <a href="/cdn-cgi/l/email-protection#146d7b61663a7179757d7854716c75796478713a777b79"><span class="__cf_email__" data-cfemail="641d0b11164a0109050d0824011c05091408014a070b09">[email&#160;protected]</span></a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">💼</div>
+                            <div class="contact-method-info">
+                                <h4>LinkedIn</h4>
+                                <a href="https://linkedin.com/in/yourprofile" target="_blank">linkedin.com/in/yourprofile</a>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="contact-icon">💻</div>
+                            <div class="contact-method-info">
+                                <h4>GitHub</h4>
+                                <a href="https://github.com/yourusername" target="_blank">github.com/yourusername</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" placeholder="your@email.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Tell me about your project..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Data Analytics Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Form submission (you'll need to configure this with your preferred form handling service)
+        document.querySelector('.contact-form form').addEventListeoogleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2D5016;
+            --primary-light: #4A7C2C;
+            --accent: #E8751A;
+            --bg: #FEFDF8;
+            --text: #1A1A1A;
+            --text-light: #666666;
+            --border: #E8E3D5;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(254, 253, 248, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            z-index: 1000;
+            padding: 1.5rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 10rem 0 6rem;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 50%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(45, 80, 22, 0.03) 0%, rgba(232, 117, 26, 0.03) 100%);
+            z-index: -1;
+            border-radius: 0 0 0 200px;
+        }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 4rem;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            font-weight: 700;
+        }
+
+        .hero .subtitle {
+            font-size: 1.4rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            max-width: 600px;
+        }
+
+        .hero .description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 650px;
+            line-height: 1.8;
+            margin-bottom: 2.5rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: 2px solid var(--primary);
+        }
+
+        .cta-button:hover {
+            background: var(--primary-light);
+            border-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 6rem 0;
+        }
+
+        .section-header {
+            margin-bottom: 4rem;
+        }
+
+        .section-tag {
+            display: inline-block;
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1rem;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .section-description {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 700px;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.4s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+            border-color: var(--primary-light);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 240px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-image::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255, 255, 255, 0.03) 10px,
+                rgba(255, 255, 255, 0.03) 20px
+            );
+            animation: slide 20s linear infinite;
+        }
+
+        @keyframes slide {
+            0% { transform: translate(0, 0); }
+            100% { transform: translate(50px, 50px); }
+        }
+
         .project-image img {
     width: 100%;
     height: 100%;
