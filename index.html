@@ -190,6 +190,7 @@
             overflow: hidden;
             transition: all 0.4s;
             cursor: pointer;
+            position: relative;
         }
 
         .project-card:hover {
@@ -200,7 +201,7 @@
 
         .project-image {
             width: 100%;
-            height: 240px;
+            height: 400px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             display: flex;
             align-items: center;
@@ -209,6 +210,8 @@
             color: rgba(255, 255, 255, 0.3);
             position: relative;
             overflow: hidden;
+            background-size: cover;
+            background-position: center;
         }
 
         .project-image::before {
@@ -231,8 +234,55 @@
             100% { transform: translate(50px, 50px); }
         }
 
+        /* Hover overlay - hidden by default, shows on hover */
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(45, 80, 22, 0.95);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 2rem;
+            z-index: 10;
+        }
+
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+
+        .project-overlay .project-tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .project-overlay .project-title {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .project-overlay .project-description {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 0.95rem;
+        }
+
+        .project-overlay .project-tools {
+            margin-top: 1rem;
+        }
+
+        .project-overlay .tool-badge {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
         .project-content {
             padding: 2rem;
+            display: none;
         }
 
         .project-tag {
@@ -538,10 +588,10 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="container">
-            <h1>Data-Driven<br>Business Insights</h1>
-            <p class="subtitle">Turning complex data into actionable solutions</p>
+            <h1>Helping Food & Service<br>Businesses Grow with Data</h1>
+            <p class="subtitle">Freelance data analyst delivering actionable insights that improve revenue, operations, and customer retention</p>
             <p class="description">
-                I help businesses, especially in food and service industries, make smarter operational decisions through data analytics. Combining real-world industry experience with analytical skills, I turn raw data into clear strategies that improve sales, efficiency, and customer experience.
+                I help restaurants, cafes, and service businesses make data-driven decisions that directly impact their bottom line. From optimizing menu performance and staffing to identifying growth opportunities and reducing waste, I turn your operational data into clear strategies that work.
             </p>
             <a href="#contact" class="cta-button">Let's Work Together</a>
         </div>
@@ -563,18 +613,19 @@
                 <div class="project-card" onclick="window.location.href='boba-shop-analysis.html'" style="cursor: pointer;">
                     <div class="project-image" style="background: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 100%);">
                         🧋
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Sales Analytics</span>
-                        <h3 class="project-title">Boba Shop Sales Performance Analysis</h3>
-                        <p class="project-description">
-                            Analyzed 49,000+ transactions across 6 months to optimize inventory, staffing, and menu performance. Identified peak hours driving 60% of daily revenue and top products generating 65% of sales, delivering actionable recommendations for operational efficiency.
-                        </p>
-                        <div class="project-tools">
-                            <span class="tool-badge">Python</span>
-                            <span class="tool-badge">Pandas</span>
-                            <span class="tool-badge">Tableau</span>
-                            <span class="tool-badge">SQL</span>
+                        <!-- Hover Overlay - Shows on mouse over -->
+                        <div class="project-overlay">
+                            <span class="project-tag">Sales Analytics</span>
+                            <h3 class="project-title">Boba Shop Sales Performance Analysis</h3>
+                            <p class="project-description">
+                                Analyzed 49,000+ transactions across 6 months to optimize inventory, staffing, and menu performance. Identified peak hours driving 60% of daily revenue and top products generating 65% of sales.
+                            </p>
+                            <div class="project-tools">
+                                <span class="tool-badge">Python</span>
+                                <span class="tool-badge">Pandas</span>
+                                <span class="tool-badge">Tableau</span>
+                                <span class="tool-badge">SQL</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -583,18 +634,19 @@
                 <div class="project-card" onclick="window.location.href='ramen-feasibility.html'" style="cursor: pointer;">
                     <div class="project-image" style="background: linear-gradient(135deg, #FF6B6B 0%, #C44569 100%);">
                         🍜
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Market Research</span>
-                        <h3 class="project-title">Seattle Ramen Shop Location Feasibility Study</h3>
-                        <p class="project-description">
-                            Conducted neighborhood analysis for startup ramen restaurant launch in Seattle. Evaluated demographics, income levels, population density, and competition across all neighborhoods to identify optimal locations aligned with target market (young professionals, $75K+ income). Delivered top 5 location recommendations with risk assessment.
-                        </p>
-                        <div class="project-tools">
-                            <span class="tool-badge">Python</span>
-                            <span class="tool-badge">Tableau</span>
-                            <span class="tool-badge">Census Data</span>
-                            <span class="tool-badge">Excel</span>
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay">
+                            <span class="project-tag">Market Research</span>
+                            <h3 class="project-title">Seattle Ramen Shop Location Feasibility Study</h3>
+                            <p class="project-description">
+                                Conducted neighborhood analysis for startup ramen restaurant launch. Evaluated demographics, income, and competition to identify optimal locations. Included financial projections and break-even analysis.
+                            </p>
+                            <div class="project-tools">
+                                <span class="tool-badge">Python</span>
+                                <span class="tool-badge">Tableau</span>
+                                <span class="tool-badge">Census Data</span>
+                                <span class="tool-badge">Excel</span>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -603,40 +655,22 @@
                 <div class="project-card" onclick="window.open('customer-segmentation%20%281%29.html', '_self')" style="cursor: pointer;">
                     <div class="project-image" style="background: linear-gradient(135deg, #4ECDC4 0%, #44A08D 100%);">
                         🎯
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Customer Analytics</span>
-                        <h3 class="project-title">E-Commerce Customer Segmentation Strategy</h3>
-                        <p class="project-description">
-                            Delivered actionable customer segmentation framework for e-commerce client using RFM methodology and K-means clustering. Analysis of 2,000+ customer records revealed high-value segments driving 53% of revenue, enabling targeted retention strategies projected to increase CLV by 20%.
-                        </p>
-                        <div class="project-tools">
-                            <span class="tool-badge">Python</span>
-                            <span class="tool-badge">Scikit-learn</span>
-                            <span class="tool-badge">Tableau</span>
+                        <!-- Hover Overlay -->
+                        <div class="project-overlay">
+                            <span class="project-tag">Customer Analytics</span>
+                            <h3 class="project-title">E-Commerce Customer Segmentation Strategy</h3>
+                            <p class="project-description">
+                                Delivered customer segmentation framework using RFM and K-means clustering. Analyzed 2,000+ customers, identified that 12% drive 53% of revenue. Projected 20% CLV increase through targeted strategies.
+                            </p>
+                            <div class="project-tools">
+                                <span class="tool-badge">Python</span>
+                                <span class="tool-badge">Scikit-learn</span>
+                                <span class="tool-badge">Tableau</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Project 4 -->
-                <div class="project-card">
-                    <div class="project-image">
-                        <span class="coming-soon">Coming Soon</span>
-                        📦
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Operations</span>
-                        <h3 class="project-title">Supply Chain Optimization Analysis</h3>
-                        <p class="project-description">
-                            Analyzed inventory turnover rates and delivery patterns to identify bottlenecks, creating optimization recommendations that reduced costs and improved delivery times.
-                        </p>
-                        <div class="project-tools">
-                            <span class="tool-badge">Excel</span>
-                            <span class="tool-badge">Python</span>
-                            <span class="tool-badge">SQL</span>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -651,44 +685,47 @@
 
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Data analyst with real-world business experience</h3>
+                    <h3>Data Analyst | Food & Beverage Specialist</h3>
                     <p>
-                        I bring a unique combination of technical data skills and practical business operations experience. Currently managing a boba tea shop, I understand the challenges business owners face and know how to translate data insights into actionable improvements.
+                        <strong>I'm Jane Ho, a freelance data analyst specializing in the food and service industry.</strong> With hands-on experience managing a boba tea shop and delivering analytics consulting for restaurant startups, I understand both the data and the business context behind it.
                     </p>
                     <p>
-                        Whether you need help understanding sales patterns, optimizing operations, analyzing customer behavior, or making data-driven decisions, I can help. I work with businesses across industries to turn their data into competitive advantages.
+                        My unique advantage: I've worked both sides—managing daily operations and solving business problems with data. This means I don't just analyze numbers; I know which metrics actually matter for restaurants and how to present insights that lead to real operational improvements.
                     </p>
                     <p>
-                        My approach is practical and results-focused. I don't just deliver charts and numbers—I provide clear insights and recommendations that you can actually implement to improve your business.
+                        <strong>What I deliver:</strong> Sales optimization strategies, customer behavior insights, location feasibility studies, inventory management recommendations, and staffing optimization—all tailored to food and service businesses looking to grow profitably.
+                    </p>
+                    <p style="color: var(--text-light); font-size: 0.95rem; font-style: italic;">
+                        💡 Tip: Add a professional headshot above this section to personalize your portfolio
                     </p>
                 </div>
 
                 <div class="skills-grid">
-                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; color: var(--primary); margin-bottom: 1.5rem; font-weight: 600;">Technical Skills</h3>
+                    <h3 style="font-family: 'Outfit', sans-serif; font-size: 1.8rem; color: var(--primary); margin-bottom: 1.5rem; font-weight: 600;">Core Competencies</h3>
                     <div class="skills-list">
                         <div class="skill-item">
                             <div class="skill-icon">🐍</div>
-                            <div class="skill-name">Python</div>
+                            <div class="skill-name">Python (Pandas, Scikit-learn)</div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">📊</div>
-                            <div class="skill-name">Tableau</div>
+                            <div class="skill-name">Tableau & Data Visualization</div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">💾</div>
-                            <div class="skill-name">SQL</div>
+                            <div class="skill-name">SQL & Database Analysis</div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">📈</div>
-                            <div class="skill-name">Excel</div>
+                            <div class="skill-name">Excel & Financial Modeling</div>
                         </div>
                         <div class="skill-item">
                             <div class="skill-icon">📉</div>
-                            <div class="skill-name">Statistics</div>
+                            <div class="skill-name">Statistical Analysis</div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-icon">🎨</div>
-                            <div class="skill-name">Data Viz</div>
+                            <div class="skill-icon">🎯</div>
+                            <div class="skill-name">Market Research & Feasibility</div>
                         </div>
                     </div>
                 </div>
