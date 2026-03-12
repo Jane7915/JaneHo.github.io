@@ -180,9 +180,9 @@
         .projects-grid {
             display: grid;
             grid-template-columns: 1fr;
+            gap: 2.5rem;
             max-width: 900px;
             margin: 0 auto;
-            gap: 2.5rem;
         }
 
         .project-card {
@@ -203,7 +203,7 @@
 
         .project-image {
             width: 100%;
-            height: 400px;
+            height: 500px;
             background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
             display: flex;
             align-items: center;
@@ -219,7 +219,7 @@
 
         /* Image zooms out on hover */
         .project-card:hover .project-image {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
 
         .project-image::before {
@@ -235,6 +235,7 @@
                 rgba(255, 255, 255, 0.03) 20px
             );
             animation: slide 20s linear infinite;
+            pointer-events: none;
         }
 
         @keyframes slide {
@@ -249,15 +250,18 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(45, 80, 22, 0.95);
+            background: rgba(45, 80, 22, 0.93);
             opacity: 0;
-            transform: scale(0.8);
+            transform: scale(0.9);
             transition: all 0.4s ease;
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 2rem;
+            align-items: center;
+            text-align: center;
+            padding: 3rem;
             z-index: 10;
+            overflow: hidden;
         }
 
         /* Overlay zooms in and fades in on hover */
@@ -269,26 +273,32 @@
         .project-overlay .project-tag {
             background: rgba(255, 255, 255, 0.2);
             color: white;
+            margin-bottom: 1rem;
         }
 
         .project-overlay .project-title {
             color: white;
             margin-bottom: 1rem;
+            font-size: 1.8rem;
         }
 
         .project-overlay .project-description {
-            color: rgba(255, 255, 255, 0.9);
-            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.95);
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            max-width: 700px;
         }
 
         .project-overlay .project-tools {
             margin-top: 1rem;
+            justify-content: center;
         }
 
         .project-overlay .tool-badge {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.25);
             color: white;
-            border: 1px solid rgba(255, 255, 255, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
         }
 
         .project-content {
@@ -623,7 +633,7 @@
                 <!-- Project 1 -->
                 <div class="project-card" onclick="window.location.href='boba-shop-analysis.html'" style="cursor: pointer;">
                     <div class="project-image" style="background-image: url('images/Boba Shop Analysis.png'); background-size: cover; background-position: center;">
-                        <!-- Hover Overlay - Shows on mouse over -->
+                        <!-- Hover Overlay -->
                         <div class="project-overlay">
                             <span class="project-tag">Sales Analytics</span>
                             <h3 class="project-title">Boba Shop Sales Performance Analysis</h3>
