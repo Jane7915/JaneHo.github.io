@@ -18,40 +18,39 @@
             --border: #E8E3D5;
             --card-bg: #FFFFFF;
         }
-
+ 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+ 
         body {
             font-family: 'Nunito', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
         }
-
+ 
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
-        /* Navigation */
+ 
         nav {
             background: rgba(254, 253, 248, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             padding: 1.5rem 0;
         }
-
+ 
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+ 
         .logo {
             font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
@@ -59,7 +58,7 @@
             color: var(--primary);
             text-decoration: none;
         }
-
+ 
         .back-link {
             color: var(--text);
             text-decoration: none;
@@ -69,16 +68,15 @@
             gap: 0.5rem;
             transition: color 0.3s;
         }
-
+ 
         .back-link:hover {
             color: var(--primary);
         }
-
-        /* Project Header */
+ 
         .project-header {
             padding: 4rem 0 2rem;
         }
-
+ 
         .project-tag {
             display: inline-block;
             background: rgba(45, 80, 22, 0.1);
@@ -89,7 +87,7 @@
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
-
+ 
         .project-header h1 {
             font-family: 'Outfit', sans-serif;
             font-size: 3rem;
@@ -97,7 +95,7 @@
             margin-bottom: 1rem;
             font-weight: 700;
         }
-
+ 
         .project-meta {
             display: flex;
             gap: 2rem;
@@ -105,116 +103,50 @@
             font-size: 1rem;
             margin-bottom: 2rem;
         }
-
+ 
         .project-meta span {
             display: flex;
             align-items: center;
             gap: 0.5rem;
         }
-
+ 
         .project-description {
             font-size: 1.2rem;
             color: var(--text-light);
             max-width: 900px;
             line-height: 1.8;
         }
-
-        /* Key Results Section */
-        .key-results {
-            background: white;
+ 
+        /* Problem Statement */
+        .problem-statement {
+            background: rgba(232, 117, 26, 0.08);
+            border-left: 4px solid var(--accent);
             padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            margin: 2rem 0;
+            border-radius: 8px;
+            margin: 1.5rem 0;
         }
-
-        .key-results h2 {
+ 
+        .problem-statement h2 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
             color: var(--primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.75rem;
             font-weight: 600;
         }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .result-card {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--bg);
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
-
-        .result-number {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.5rem;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .result-label {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Tableau Section */
-        .tableau-section {
-            padding: 2rem 0 4rem;
-        }
-
-        .section-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .section-subtitle {
+ 
+        .problem-statement p {
             color: var(--text-light);
             font-size: 1.1rem;
-            margin-bottom: 2rem;
+            line-height: 1.8;
         }
-
-        .tableau-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .tableau-embed {
-            width: 100%;
-            height: 800px;
-            border: none;
-        }
-
-        /* Project Details Section */
-        .project-details {
-            padding: 3rem 0;
-            background: white;
-            margin: 3rem 0;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-
-        .project-details .container {
-            padding: 2rem 4rem;
-        }
-
+ 
+        /* Objective + Approach grid */
         .details-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
         }
-
+ 
         .details-section h3 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.4rem;
@@ -222,12 +154,12 @@
             margin-bottom: 1rem;
             font-weight: 600;
         }
-
+ 
         .details-section ul {
             list-style: none;
             padding: 0;
         }
-
+ 
         .details-section li {
             padding: 0.7rem 0;
             color: var(--text-light);
@@ -235,7 +167,7 @@
             position: relative;
             padding-left: 1.5rem;
         }
-
+ 
         .details-section li::before {
             content: "→";
             position: absolute;
@@ -243,18 +175,102 @@
             color: var(--primary);
             font-weight: bold;
         }
-
-        /* Tools Section */
+ 
+        /* Key Results */
+        .key-results {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+ 
+        .key-results h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+ 
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+ 
+        .result-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+ 
+        .result-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+ 
+        .result-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+ 
+        /* Tableau */
+        .tableau-section {
+            padding: 2rem 0 4rem;
+        }
+ 
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+ 
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+ 
+        .tableau-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+ 
+        /* Project Details (Insights + Outcomes only) */
+        .project-details {
+            padding: 3rem 0;
+            background: white;
+            margin: 3rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+ 
+        .project-details .container {
+            padding: 2rem 4rem;
+        }
+ 
+        /* Tools */
         .tools-used {
             padding: 2rem 0 3rem;
         }
-
+ 
         .tools-grid {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-
+ 
         .tool-badge {
             background: var(--primary);
             color: white;
@@ -263,20 +279,20 @@
             font-weight: 600;
             font-size: 1rem;
         }
-
-        /* Links Section */
+ 
+        /* Links */
         .project-links {
             padding: 2rem 0 4rem;
             text-align: center;
         }
-
+ 
         .links-container {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-
+ 
         .project-link {
             display: inline-block;
             background: var(--primary);
@@ -288,37 +304,30 @@
             transition: all 0.3s;
             border: 2px solid var(--primary);
         }
-
+ 
         .project-link:hover {
             background: var(--primary-light);
             border-color: var(--primary-light);
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2);
         }
-
+ 
         .project-link.secondary {
             background: white;
             color: var(--primary);
         }
-
+ 
         .project-link.secondary:hover {
             background: var(--bg);
         }
-
-        /* Responsive */
+ 
         @media (max-width: 768px) {
             .project-header h1 {
                 font-size: 2rem;
             }
-
             .details-grid {
                 grid-template-columns: 1fr;
             }
-
-            .tableau-embed {
-                height: 600px;
-            }
-
             .results-grid {
                 grid-template-columns: 1fr;
             }
@@ -333,7 +342,7 @@
             <a href="index.html" class="back-link">← Back to Home</a>
         </div>
     </nav>
-
+ 
     <!-- Project Header -->
     <section class="project-header">
         <div class="container">
@@ -344,12 +353,56 @@
                 <span>🏢 Industry: E-Commerce/Retail</span>
                 <span>⏱️ Duration: 1 week</span>
             </div>
+    <!-- Business Problem Statement -->
+    <section>
+        <div class="container">
+            <div class="problem-statement">
+                <h2>Business Problem</h2>
+                <p>
+                    The e-commerce company faced rising customer acquisition costs and declining retention but lacked visibility into which customers generated the most value. Without customer segmentation, marketing efforts were applied uniformly, leading to inefficient spending and missed opportunities to retain high-value customers.
+                </p>
+            </div>
+        </div>
+    </section>
             <p class="project-description">
                 Delivered comprehensive customer segmentation and retention strategy for an e-commerce client facing high acquisition costs and declining retention rates. Applied RFM methodology and machine learning clustering on 2,000+ customer transaction records to identify behavioral segments, quantify revenue drivers, and develop data-driven marketing strategies that increased projected customer lifetime value by 20%.
             </p>
         </div>
     </section>
-
+ 
+    
+ 
+    <!-- Client Challenge + Analytical Approach -->
+    <section>
+        <div class="container">
+            <div class="details-grid" style="margin: 1.5rem 0;">
+ 
+                <div class="details-section">
+                    <h3>Client Challenge</h3>
+                    <ul>
+                        <li>Customer acquisition costs reaching $45 per customer</li>
+                        <li>Undifferentiated marketing approach across customer base</li>
+                        <li>Limited visibility into customer value distribution</li>
+                        <li>Constrained marketing budget requiring optimization</li>
+                        <li>No systematic identification of churn risk indicators</li>
+                    </ul>
+                </div>
+ 
+                <div class="details-section">
+                    <h3>Analytical Approach</h3>
+                    <ul>
+                        <li>RFM framework (Recency, Frequency, Monetary value)</li>
+                        <li>K-means clustering with optimal validation (k=4)</li>
+                        <li>Statistical segmentation and behavioral profiling</li>
+                        <li>Revenue concentration and CLV analysis</li>
+                        <li>Strategic recommendations by segment</li>
+                    </ul>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+ 
     <!-- Key Results -->
     <section class="container">
         <div class="key-results">
@@ -374,7 +427,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Tableau Dashboard -->
     <section class="tableau-section">
         <div class="container">
@@ -423,33 +476,12 @@
             </div>
         </div>
     </section>
-
-    <!-- Project Details -->
+ 
+    <!-- Strategic Insights + Business Outcomes -->
     <section class="project-details">
         <div class="container">
             <div class="details-grid">
-                <div class="details-section">
-                    <h3>Client Challenge</h3>
-                    <ul>
-                        <li>Customer acquisition costs reaching $45 per customer</li>
-                        <li>Undifferentiated marketing approach across customer base</li>
-                        <li>Limited visibility into customer value distribution</li>
-                        <li>Constrained marketing budget requiring optimization</li>
-                        <li>No systematic identification of churn risk indicators</li>
-                    </ul>
-                </div>
-
-                <div class="details-section">
-                    <h3>Analytical Approach</h3>
-                    <ul>
-                        <li>RFM framework (Recency, Frequency, Monetary value)</li>
-                        <li>K-means clustering with optimal validation (k=4)</li>
-                        <li>Statistical segmentation and behavioral profiling</li>
-                        <li>Revenue concentration and CLV analysis</li>
-                        <li>Strategic recommendations by segment</li>
-                    </ul>
-                </div>
-
+ 
                 <div class="details-section">
                     <h3>Strategic Insights</h3>
                     <ul>
@@ -460,7 +492,7 @@
                         <li>Clear behavioral patterns enable predictive modeling</li>
                     </ul>
                 </div>
-
+ 
                 <div class="details-section">
                     <h3>Business Outcomes</h3>
                     <ul>
@@ -471,10 +503,11 @@
                         <li>Operational playbook for ongoing segmentation</li>
                     </ul>
                 </div>
+ 
             </div>
         </div>
     </section>
-
+ 
     <!-- Tools Used -->
     <section class="tools-used">
         <div class="container">
@@ -492,7 +525,7 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Project Links -->
     <section class="project-links">
         <div class="container">
@@ -505,14 +538,14 @@
                     View Analysis Code
                 </a>
                 <a href="https://github.com/jane7915/JaneHo.github.io/blob/main/data/customer_segmentation_dataset.csv" target="_blank" class="project-link secondary">
-    Download Dataset (CSV)
-</a>
+                    Download Dataset (CSV)
+                </a>
                 <a href="index.html" class="project-link secondary">
                     ← Back to Portfolio
                 </a>
             </div>
         </div>
     </section>
-
+ 
 </body>
 </html>
