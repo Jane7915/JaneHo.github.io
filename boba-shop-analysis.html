@@ -290,6 +290,27 @@
                 grid-template-columns: 1fr;
             }
         }
+        .problem-statement {
+    background: rgba(232, 117, 26, 0.08);
+    border-left: 4px solid var(--accent);
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+}
+
+.problem-statement h2 {
+    font-family: 'Outfit', sans-serif;
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.problem-statement p {
+    color: var(--text-light);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
     </style>
 </head>
 <body>
@@ -338,6 +359,46 @@
             </div>
         </div>
     </section>
+    <section class="container">
+    <div class="problem-statement">
+        <h2>Business Problem</h2>
+        <p>
+            The boba shop experienced high order volume across multiple channels (in-store and delivery platforms) but lacked data visibility into product demand patterns, peak traffic periods, and menu performance. As a result, the store faced challenges in staff scheduling, inventory planning, and identifying high-performing products, leading to potential operational inefficiencies and lost revenue opportunities.
+        </p>
+    </div>
+</section>
+    <section class="container">
+    <div class="details-grid" style="margin: 1.5rem 0;">
+        
+        <div class="details-section"> 
+          <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+                <div class="details-section">
+                    <h3>Business Objective</h3>
+                    <ul>
+                        <li>Optimize inventory management based on product demand patterns</li>
+                        <li>Identify peak sales periods for staffing optimization</li>
+                        <li>Analyze menu performance to guide pricing and promotion strategies</li>
+                        <li>Understand customer preferences across order channels</li>
+                        <li>Improve operational efficiency and reduce waste</li>
+                    </ul>
+                </div>
+
+        <div class="details-section"> 
+            <div class="details-section">
+                    <h3>Analytical Approach</h3>
+                    <ul>
+                        <li>Time-series analysis of daily and hourly sales patterns</li>
+                        <li>Product performance ranking by revenue and volume</li>
+                        <li>Channel analysis (In-Store, UberEats, DoorDash, Grubhub)</li>
+                        <li>Customer behavior analysis (size preferences, toppings, customization)</li>
+                        <li>Revenue optimization and menu engineering recommendations</li>
+                    </ul>
+                </div>
+            
+    </div>
+</section>
 
     <section class="tableau-section">
         <div class="container">
@@ -387,30 +448,8 @@
         </div>
     </section>
 
-    <section class="project-details">
-        <div class="container">
-            <div class="details-grid">
-                <div class="details-section">
-                    <h3>Business Objective</h3>
-                    <ul>
-                        <li>Optimize inventory management based on product demand patterns</li>
-                        <li>Identify peak sales periods for staffing optimization</li>
-                        <li>Analyze menu performance to guide pricing and promotion strategies</li>
-                        <li>Understand customer preferences across order channels</li>
-                        <li>Improve operational efficiency and reduce waste</li>
-                    </ul>
-                </div>
-
-                <div class="details-section">
-                    <h3>Analytical Approach</h3>
-                    <ul>
-                        <li>Time-series analysis of daily and hourly sales patterns</li>
-                        <li>Product performance ranking by revenue and volume</li>
-                        <li>Channel analysis (In-Store, UberEats, DoorDash, Grubhub)</li>
-                        <li>Customer behavior analysis (size preferences, toppings, customization)</li>
-                        <li>Revenue optimization and menu engineering recommendations</li>
-                    </ul>
-                </div>
+  
+                
 
                 <div class="details-section">
                     <h3>Key Findings</h3>
