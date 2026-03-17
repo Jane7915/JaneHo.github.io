@@ -1,3 +1,6 @@
+Seattle ramen · HTML
+Copy
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,39 +21,39 @@
             --border: #E8E3D5;
             --card-bg: #FFFFFF;
         }
-
+ 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+ 
         body {
             font-family: 'Nunito', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
         }
-
+ 
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
+ 
         nav {
             background: rgba(254, 253, 248, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             padding: 1.5rem 0;
         }
-
+ 
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+ 
         .logo {
             font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
@@ -58,22 +61,22 @@
             color: var(--primary);
             text-decoration: none;
         }
-
+ 
         .back-link {
             color: var(--text);
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
         }
-
+ 
         .back-link:hover {
             color: var(--primary);
         }
-
+ 
         .project-header {
             padding: 4rem 0 2rem;
         }
-
+ 
         .project-tag {
             display: inline-block;
             background: rgba(45, 80, 22, 0.1);
@@ -84,7 +87,7 @@
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
-
+ 
         .project-header h1 {
             font-family: 'Outfit', sans-serif;
             font-size: 3rem;
@@ -92,7 +95,7 @@
             margin-bottom: 1rem;
             font-weight: 700;
         }
-
+ 
         .project-meta {
             display: flex;
             gap: 2rem;
@@ -100,101 +103,44 @@
             font-size: 1rem;
             margin-bottom: 2rem;
         }
-
+ 
         .project-description {
             font-size: 1.2rem;
             color: var(--text-light);
             max-width: 900px;
             line-height: 1.8;
         }
-
-        .key-results {
-            background: white;
+ 
+        /* Problem Statement */
+        .problem-statement {
+            background: rgba(232, 117, 26, 0.08);
+            border-left: 4px solid var(--accent);
             padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            margin: 2rem 0;
+            border-radius: 8px;
+            margin: 1.5rem 0;
         }
-
-        .key-results h2 {
+ 
+        .problem-statement h2 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
             color: var(--primary);
-            margin-bottom: 1.5rem;
+            margin-bottom: 0.75rem;
             font-weight: 600;
         }
-
-        .results-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .result-card {
-            text-align: center;
-            padding: 1.5rem;
-            background: var(--bg);
-            border-radius: 8px;
-            border: 1px solid var(--border);
-        }
-
-        .result-number {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.5rem;
-            color: var(--primary);
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .result-label {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        .tableau-section {
-            padding: 2rem 0 4rem;
-        }
-
-        .section-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2rem;
-            color: var(--primary);
-            margin-bottom: 1rem;
-            font-weight: 600;
-        }
-
-        .section-subtitle {
+ 
+        .problem-statement p {
             color: var(--text-light);
             font-size: 1.1rem;
-            margin-bottom: 2rem;
+            line-height: 1.8;
         }
-
-        .tableau-container {
-            background: white;
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
-        }
-
-        .project-details {
-            padding: 3rem 0;
-            background: white;
-            margin: 3rem 0;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-
-        .project-details .container {
-            padding: 2rem 4rem;
-        }
-
+ 
+        /* Shared details grid */
         .details-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
         }
-
+ 
         .details-section h3 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.4rem;
@@ -202,12 +148,12 @@
             margin-bottom: 1rem;
             font-weight: 600;
         }
-
+ 
         .details-section ul {
             list-style: none;
             padding: 0;
         }
-
+ 
         .details-section li {
             padding: 0.7rem 0;
             color: var(--text-light);
@@ -215,7 +161,7 @@
             position: relative;
             padding-left: 1.5rem;
         }
-
+ 
         .details-section li::before {
             content: "→";
             position: absolute;
@@ -223,17 +169,102 @@
             color: var(--primary);
             font-weight: bold;
         }
-
+ 
+        /* Key Results */
+        .key-results {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+ 
+        .key-results h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+ 
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+ 
+        .result-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+ 
+        .result-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+ 
+        .result-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+ 
+        /* Tableau */
+        .tableau-section {
+            padding: 2rem 0 4rem;
+        }
+ 
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+ 
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+ 
+        .tableau-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+ 
+        /* Project Details (Findings + Recommendations only) */
+        .project-details {
+            padding: 3rem 0;
+            background: white;
+            margin: 3rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+ 
+        .project-details .container {
+            padding: 2rem 4rem;
+        }
+ 
+        /* Tools */
         .tools-used {
             padding: 2rem 0 3rem;
         }
-
+ 
         .tools-grid {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-
+ 
         .tool-badge {
             background: var(--primary);
             color: white;
@@ -242,19 +273,20 @@
             font-weight: 600;
             font-size: 1rem;
         }
-
+ 
+        /* Links */
         .project-links {
             padding: 2rem 0 4rem;
             text-align: center;
         }
-
+ 
         .links-container {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-
+ 
         .project-link {
             display: inline-block;
             background: var(--primary);
@@ -265,23 +297,23 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-
+ 
         .project-link:hover {
             background: var(--primary-light);
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2);
         }
-
+ 
         .project-link.secondary {
             background: white;
             color: var(--primary);
             border: 2px solid var(--primary);
         }
-
+ 
         .project-link.secondary:hover {
             background: var(--bg);
         }
-
+ 
         @media (max-width: 768px) {
             .project-header h1 {
                 font-size: 2rem;
@@ -299,7 +331,8 @@
             <a href="index.html" class="back-link">← Back to Home</a>
         </div>
     </nav>
-
+ 
+    <!-- Project Header -->
     <section class="project-header">
         <div class="container">
             <span class="project-tag">Market Research & Feasibility</span>
@@ -309,12 +342,58 @@
                 <span>🏢 Industry: Restaurant / Food Service</span>
                 <span>🎯 Client: Confidential (Startup Ramen Restaurant)</span>
             </div>
+    <!-- Business Problem Statement -->
+    <section>
+        <div class="container">
+            <div class="problem-statement">
+                <h2>Business Problem</h2>
+                <p>
+                    A startup founder was preparing to open a ramen restaurant in Seattle with no prior data on where to locate or whether the market could support the business. Key unknowns included which neighborhoods had the right demographic profile, how saturated the local ramen market was, and whether the financial model was viable. The client needed evidence-based answers before committing to a lease and significant capital investment.
+                </p>
+            </div>
+        </div>
+    </section>
             <p class="project-description">
                 Delivered comprehensive market feasibility analysis for a confidential startup client planning to launch a ramen restaurant in Seattle Summer 2026. Analyzed Seattle neighborhood demographics, population density, income levels, competitive landscape, and projected first-year financials to identify optimal locations and assess business viability. Provided data-driven neighborhood recommendations with risk assessment, market entry strategy, and cash flow projections.
             </p>
         </div>
     </section>
-
+ 
+    
+ 
+    <!-- Client Objective + Analytical Approach -->
+    <section>
+        <div class="container">
+            <div class="details-grid" style="margin: 1.5rem 0;">
+ 
+                <div class="details-section">
+                    <h3>Client Objective</h3>
+                    <ul>
+                        <li>Identify optimal Seattle neighborhoods for ramen shop launch (Summer 2026)</li>
+                        <li>Evaluate locations based on target demographic alignment (young professionals, high income)</li>
+                        <li>Assess population density, foot traffic potential, and competitive landscape</li>
+                        <li>Project first-year financial performance including cash flow and break-even timeline</li>
+                        <li>Provide comprehensive risk assessment and go/no-go recommendation</li>
+                    </ul>
+                </div>
+ 
+                <div class="details-section">
+                    <h3>Analytical Approach</h3>
+                    <ul>
+                        <li>Demographic analysis using Seattle census and population data</li>
+                        <li>Income distribution mapping and purchasing power by neighborhood</li>
+                        <li>Age demographic segmentation aligned with target market profile</li>
+                        <li>Competitive density analysis (existing ramen and Asian restaurants)</li>
+                        <li>Financial modeling: Revenue projections, cost structure, cash flow analysis</li>
+                        <li>Multi-factor scoring model for location prioritization</li>
+                    </ul>
+                </div>
+ 
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Key Results -->
     <section class="container">
         <div class="key-results">
             <h2>Key Deliverables & Findings</h2>
@@ -338,7 +417,8 @@
             </div>
         </div>
     </section>
-
+ 
+    <!-- Dashboard 1 -->
     <section class="tableau-section">
         <div class="container">
             <h2 class="section-title">Dashboard 1: Location Analysis</h2>
@@ -386,7 +466,8 @@
             </div>
         </div>
     </section>
-
+ 
+    <!-- Dashboard 2 -->
     <section class="tableau-section" style="padding-top: 0;">
         <div class="container">
             <h2 class="section-title">Dashboard 2: First-Year Financial Projections</h2>
@@ -435,33 +516,12 @@
             </div>
         </div>
     </section>
-
+ 
+    <!-- Key Findings + Recommendations -->
     <section class="project-details">
         <div class="container">
             <div class="details-grid">
-                <div class="details-section">
-                    <h3>Client Objective</h3>
-                    <ul>
-                        <li>Identify optimal Seattle neighborhoods for ramen shop launch (Summer 2026)</li>
-                        <li>Evaluate locations based on target demographic alignment (young professionals, high income)</li>
-                        <li>Assess population density, foot traffic potential, and competitive landscape</li>
-                        <li>Project first-year financial performance including cash flow and break-even timeline</li>
-                        <li>Provide comprehensive risk assessment and go/no-go recommendation</li>
-                    </ul>
-                </div>
-
-                <div class="details-section">
-                    <h3>Analytical Approach</h3>
-                    <ul>
-                        <li>Demographic analysis using Seattle census and population data</li>
-                        <li>Income distribution mapping and purchasing power by neighborhood</li>
-                        <li>Age demographic segmentation aligned with target market profile</li>
-                        <li>Competitive density analysis (existing ramen and Asian restaurants)</li>
-                        <li>Financial modeling: Revenue projections, cost structure, cash flow analysis</li>
-                        <li>Multi-factor scoring model for location prioritization</li>
-                    </ul>
-                </div>
-
+ 
                 <div class="details-section">
                     <h3>Key Findings</h3>
                     <ul>
@@ -472,7 +532,7 @@
                         <li>Competitive analysis reveals opportunity gaps in emerging neighborhoods</li>
                     </ul>
                 </div>
-
+ 
                 <div class="details-section">
                     <h3>Recommendations & Impact</h3>
                     <ul>
@@ -484,10 +544,12 @@
                         <li>Market entry strategy: Soft launch with limited menu, scale based on customer response</li>
                     </ul>
                 </div>
+ 
             </div>
         </div>
     </section>
-
+ 
+    <!-- Tools -->
     <section class="tools-used">
         <div class="container">
             <h2 class="section-title">Technical Stack & Data Sources</h2>
@@ -501,7 +563,8 @@
             </div>
         </div>
     </section>
-
+ 
+    <!-- Links -->
     <section class="project-links">
         <div class="container">
             <h2 class="section-title">Project Assets</h2>
@@ -521,6 +584,7 @@
             </div>
         </div>
     </section>
-
+ 
 </body>
 </html>
+ 
