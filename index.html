@@ -71,7 +71,7 @@
         }
  
         .nav-links a {
-            color: var(--text);
+            color: var(--primary);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -82,9 +82,37 @@
             color: var(--primary);
         }
  
+        /* Section Header Bar */
+        .section-header-bar {
+            background: var(--primary);
+            padding: 1rem 0;
+            margin-bottom: 0;
+        }
+ 
+        .section-header-bar .container {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+ 
+        .section-header-bar span {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: rgba(255, 255, 255, 0.7);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+ 
+        .section-header-bar .bar-line {
+            flex: 1;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+ 
         /* Hero Section */
         .hero {
-            padding: 10rem 0 6rem;
+            padding: 6rem 0 6rem;
             position: relative;
         }
  
@@ -100,7 +128,14 @@
             border-radius: 0 0 0 200px;
         }
  
-        .hero h1 {
+        .hero .container {
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 4rem;
+            align-items: center;
+        }
+ 
+        .hero-text h1 {
             font-family: 'Outfit', sans-serif;
             font-size: 4rem;
             line-height: 1.1;
@@ -109,19 +144,34 @@
             font-weight: 700;
         }
  
-        .hero .subtitle {
+        .hero-text .subtitle {
             font-size: 1.4rem;
             color: var(--text-light);
             margin-bottom: 2rem;
             max-width: 600px;
         }
  
-        .hero .description {
+        .hero-text .description {
             font-size: 1.1rem;
             color: var(--text-light);
             max-width: 650px;
             line-height: 1.8;
             margin-bottom: 2.5rem;
+        }
+ 
+        /* Headshot */
+        .hero-headshot {
+            flex-shrink: 0;
+        }
+ 
+        .hero-headshot img {
+            width: 260px;
+            height: 260px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid var(--primary);
+            box-shadow: 0 8px 32px rgba(45, 80, 22, 0.18);
+            display: block;
         }
  
         .cta-button {
@@ -534,7 +584,7 @@
         /* Brand Summary Block */
         .brand-summary {
             background: var(--primary);
-            padding: 4rem 0;
+            padding: 2rem 0;
             text-align: center;
         }
  
@@ -568,11 +618,26 @@
  
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 {
+            .hero .container {
+                grid-template-columns: 1fr;
+            }
+ 
+            .hero-headshot {
+                display: flex;
+                justify-content: center;
+                order: -1;
+            }
+ 
+            .hero-headshot img {
+                width: 180px;
+                height: 180px;
+            }
+ 
+            .hero-text h1 {
                 font-size: 2.5rem;
             }
  
-            .hero .subtitle {
+            .hero-text .subtitle {
                 font-size: 1.2rem;
             }
  
@@ -627,22 +692,34 @@
     </nav>
  
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" style="padding-top: 10rem;">
         <div class="container">
-            <h1>Smarter Business Decisions,<br>Backed by Data</h1>
-            <p class="subtitle">Freelance data analyst helping retail, food, and service businesses turn data into clear, revenue-driving strategies</p>
-            <p class="description">
-                I work with customer-driven businesses to uncover what's working, what's not, and where the biggest growth opportunities lie. From customer behavior and sales performance to market research and content strategy, I turn data into actionable recommendations that drive real business outcomes. My goal is simple: give you the clarity to make confident decisions and invest your resources where they'll actually move the needle.
-            </p>
-            <a href="#contact" class="cta-button">Let's Work Together</a>
+            <div class="hero-text">
+                <h1>Smarter Business Decisions,<br>Backed by Data</h1>
+                <p class="subtitle">Freelance data analyst helping retail, food, and service businesses turn data into clear, revenue-driving strategies</p>
+                <p class="description">
+                    I work with customer-driven businesses to uncover what's working, what's not, and where the biggest growth opportunities lie. From customer behavior and sales performance to market research and content strategy, I turn data into actionable recommendations that drive real business outcomes. My goal is simple: give you the clarity to make confident decisions and invest your resources where they'll actually move the needle.
+                </p>
+                <a href="#contact" class="cta-button">Let's Work Together</a>
+            </div>
+            <div class="hero-headshot">
+                <img src="images/jane.jpg" alt="Jane Ho — Freelance Data Analyst" />
+            </div>
         </div>
     </section>
+ 
+    <!-- Projects Section Header Bar -->
+    <div class="section-header-bar">
+        <div class="container">
+            <span>Portfolio</span>
+            <div class="bar-line"></div>
+        </div>
+    </div>
  
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-description">
                     Real-world data analysis projects showcasing skills in visualization, statistical analysis, and business intelligence across various industries.
@@ -725,16 +802,22 @@
                         </div>
                     </div>
                 </div>
- 
             </div>
         </div>
     </section>
+ 
+    <!-- About Section Header Bar -->
+    <div class="section-header-bar">
+        <div class="container">
+            <span>About Me</span>
+            <div class="bar-line"></div>
+        </div>
+    </div>
  
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">About Me</span>
                 <h2 class="section-title">Industry Experience Meets Data Skills</h2>
             </div>
  
@@ -785,11 +868,18 @@
         </div>
     </section>
  
+    <!-- Contact Section Header Bar -->
+    <div class="section-header-bar">
+        <div class="container">
+            <span>Get In Touch</span>
+            <div class="bar-line"></div>
+        </div>
+    </div>
+ 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Get In Touch</span>
                 <h2 class="section-title">Let's Discuss Your Project</h2>
                 <p class="section-description">
                     Need help with data analysis for your business? I'd love to discuss how I can help you make better decisions with your data.
@@ -860,21 +950,16 @@
     </footer>
  
     <script>
-        // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
                 e.preventDefault();
                 const target = document.querySelector(this.getAttribute('href'));
                 if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
         });
  
-        // Form submission feedback
         const form = document.querySelector('.contact-form form');
         if (form) {
             form.addEventListener('submit', function(e) {
@@ -886,3 +971,4 @@
     </script>
 </body>
 </html>
+ 
