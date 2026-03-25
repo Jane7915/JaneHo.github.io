@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seattle Japanese Food Social Media Analysis | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #2D5016;
+            --primary-light: #4A7C2C;
+            --accent: #E8751A;
+            --bg: #FEFDF8;
+            --text: #1A1A1A;
+            --text-light: #666666;
+            --border: #E8E3D5;
+            --card-bg: #FFFFFF;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Nunito', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        nav {
+            background: rgba(254, 253, 248, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--border);
+            padding: 1.5rem 0;
+        }
+
+        nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+
+        .back-link {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: var(--primary);
+        }
+
+        .project-header {
+            padding: 4rem 0 2rem;
+        }
+
+        .project-tag {
+            display: inline-block;
+            background: rgba(45, 80, 22, 0.1);
+            color: var(--primary);
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .project-header h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .project-meta {
+            display: flex;
+            gap: 2rem;
+            color: var(--text-light);
+            font-size: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .project-description {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 900px;
+            line-height: 1.8;
+        }
+
+        .problem-statement {
+            background: rgba(232, 117, 26, 0.08);
+            border-left: 4px solid var(--accent);
+            padding: 2rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+        }
+
+        .problem-statement h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 0.75rem;
+            font-weight: 600;
+        }
+
+        .problem-statement p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .details-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .details-section h3 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.4rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .details-section ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .details-section li {
+            padding: 0.7rem 0;
+            color: var(--text-light);
+            line-height: 1.7;
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .details-section li::before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .key-results {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin: 2rem 0;
+        }
+
+        .key-results h2 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .results-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .result-card {
+            text-align: center;
+            padding: 1.5rem;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .result-number {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.5rem;
+            color: var(--primary);
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+
+        .result-label {
+            color: var(--text-light);
+            font-size: 0.9rem;
+        }
+
+        .tableau-section {
+            padding: 2rem 0 4rem;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .section-subtitle {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        .tableau-container {
+            background: white;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        /* Placeholder shown before Tableau URL is added */
+        .tableau-placeholder {
+            background: linear-gradient(135deg, rgba(45, 80, 22, 0.05) 0%, rgba(232, 117, 26, 0.05) 100%);
+            border: 2px dashed var(--border);
+            border-radius: 8px;
+            padding: 4rem 2rem;
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .tableau-placeholder p {
+            font-size: 1rem;
+            margin-top: 0.5rem;
+        }
+
+        .tableau-placeholder .placeholder-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-details {
+            padding: 3rem 0;
+            background: white;
+            margin: 3rem 0;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+
+        .project-details .container {
+            padding: 2rem 4rem;
+        }
+
+        .tools-used {
+            padding: 2rem 0 3rem;
+        }
+
+        .tools-grid {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tool-badge {
+            background: var(--primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+        }
+
+        .project-links {
+            padding: 2rem 0 4rem;
+            text-align: center;
+        }
+
+        .links-container {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .project-link {
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .project-link:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2);
+        }
+
+        .project-link.secondary {
+            background: white;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+
+        .project-link.secondary:hover {
+            background: var(--bg);
+        }
+
+        @media (max-width: 768px) {
+            .project-header h1 {
+                font-size: 2rem;
+            }
+            .details-grid {
+                grid-template-columns: 1fr;
+            }
+            .project-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="container">
+            <a href="index.html" class="logo">Data Portfolio</a>
+            <a href="index.html" class="back-link">← Back to Home</a>
+        </div>
+    </nav>
+
+    <!-- Project Header -->
+    <section class="project-header">
+        <div class="container">
+            <span class="project-tag">Social Media Analytics</span>
+            <h1>Seattle Japanese Food — Social Media Strategy Analysis</h1>
+            <div class="project-meta">
+                <span>📅 Completed: March 2026</span>
+                <span>🏢 Industry: Food & Beverage / Digital Marketing</span>
+                <span>🎯 Focus: Content Strategy & Platform Analysis</span>
+            </div>
+
+            <!-- Business Problem -->
+            <div class="problem-statement">
+                <h2>Business Problem</h2>
+                <p>
+                    A Seattle-based Japanese food brand needed to understand which content topics, keywords, and social media platforms would generate the highest reach and engagement before investing in a content marketing strategy. Key unknowns included which keywords had the best views-to-engagement ratio, how their YouTube performance compared to industry benchmarks, and whether search interest in ramen content was growing or declining heading into 2026.
+                </p>
+            </div>
+
+            <p class="project-description">
+                Collected and analyzed real YouTube API data alongside simulated platform data (Instagram, TikTok, X) to build a two-dashboard content strategy framework. Identified ramen mukbang as the highest-opportunity keyword at 23M average views, confirmed YouTube performance at 145× above the industry benchmark, and tracked rising Google Trends interest in ramen core content through early 2026. Delivered platform-level virality analysis and keyword-level opportunity scoring across 13 tracked search terms.
+            </p>
+        </div>
+    </section>
+
+    <!-- Client Objective + Analytical Approach -->
+    <section>
+        <div class="container">
+            <div class="details-grid" style="margin: 1.5rem 0;">
+
+                <div class="details-section">
+                    <h3>Project Objectives</h3>
+                    <ul>
+                        <li>Identify highest-opportunity keywords for YouTube content targeting Seattle Japanese food</li>
+                        <li>Compare real YouTube channel performance against Dash Social industry benchmarks</li>
+                        <li>Analyze virality patterns across YouTube, Instagram, TikTok, and X by topic category</li>
+                        <li>Track Google Trends search interest over time for ramen core vs side dish content</li>
+                        <li>Deliver actionable platform and content recommendations backed by data</li>
+                    </ul>
+                </div>
+
+                <div class="details-section">
+                    <h3>Analytical Approach</h3>
+                    <ul>
+                        <li>YouTube Data API v3 extraction: 317 real videos across 13 keyword searches</li>
+                        <li>Google Trends API: Weekly search interest data from Nov 2023 to Mar 2026</li>
+                        <li>Kaggle synthetic dataset: 2,000 simulated posts across Instagram, TikTok, X</li>
+                        <li>Benchmark comparison using Dash Social 2024 industry averages</li>
+                        <li>Keyword scoring by avg views, avg likes, engagement rate, and trends momentum</li>
+                        <li>Two-dashboard Tableau build: industry overview + content strategy</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Results -->
+    <section class="container">
+        <div class="key-results">
+            <h2>Key Deliverables & Findings</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <div class="result-number">145×</div>
+                    <div class="result-label">Above Industry Avg Views (YouTube)</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">23.3M</div>
+                    <div class="result-label">Avg Views — Top Keyword (Ramen Mukbang)</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">2,228</div>
+                    <div class="result-label">Total Posts Analyzed</div>
+                </div>
+                <div class="result-card">
+                    <div class="result-number">13</div>
+                    <div class="result-label">Keywords Tracked with Trends Data</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard 1 -->
+    <section class="tableau-section">
+        <div class="container">
+            <h2 class="section-title">Dashboard 1: Industry Overview</h2>
+            <p class="section-subtitle">Platform-level engagement comparison, viral rates, and simulated industry patterns across YouTube, Instagram, TikTok, and X</p>
+            <div class="tableau-container">
+                <!-- REPLACE the div below with your Tableau embed code once published to Tableau Public -->
+                <div class="tableau-placeholder">
+                    <div class="placeholder-icon">📊</div>
+                    <strong>Tableau Dashboard Coming Soon</strong>
+                    <p>Publish to Tableau Public and replace this section with your embed code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dashboard 2 -->
+    <section class="tableau-section" style="padding-top: 0;">
+        <div class="container">
+            <h2 class="section-title">Dashboard 2: Content Strategy Analysis</h2>
+            <p class="section-subtitle">Keyword performance, YouTube benchmark comparison, and Google Trends momentum for Seattle Japanese food content</p>
+            <div class="tableau-container">
+                <!-- REPLACE the div below with your Tableau embed code once published to Tableau Public -->
+                <div class="tableau-placeholder">
+                    <div class="placeholder-icon">📈</div>
+                    <strong>Tableau Dashboard Coming Soon</strong>
+                    <p>Publish to Tableau Public and replace this section with your embed code.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Findings + Recommendations -->
+    <section class="project-details">
+        <div class="container">
+            <div class="details-grid">
+
+                <div class="details-section">
+                    <h3>Key Findings</h3>
+                    <ul>
+                        <li>Ramen mukbang drives 23.3M avg views — 2× the next highest keyword, confirming mass-appeal content dominates niche Seattle terms</li>
+                        <li>YouTube channel performs 145× above the Dash Social industry benchmark for avg video views (9.9M vs 68K)</li>
+                        <li>Ramen Core search interest shows a consistent upward trend from 2024 through early 2026 — growing opportunity window</li>
+                        <li>Seattle-specific keywords (Seattle izakaya, ramen Seattle review) show very low reach but strong like-to-view ratios, indicating a loyal niche audience</li>
+                        <li>All platforms show similar viral rates (~69–71%) — content quality matters more than platform choice</li>
+                        <li>X (Twitter) leads engagement rate at 20.1% but has a declining user base — Instagram and TikTok offer more sustainable growth</li>
+                    </ul>
+                </div>
+
+                <div class="details-section">
+                    <h3>Recommendations & Impact</h3>
+                    <ul>
+                        <li>Primary content focus: Ramen mukbang and ramen 2025 formats — highest reach, proven audience demand</li>
+                        <li>Platform priority: Instagram and TikTok for growth; YouTube for depth and search discoverability</li>
+                        <li>Seattle-specific content strategy: Use as community-building layer, not primary growth driver — volume is low but loyalty is high</li>
+                        <li>Timing opportunity: Publish ramen core content now — Google Trends shows momentum accelerating into 2026</li>
+                        <li>Side dish keywords (takoyaki, gyoza) represent a mid-tier opportunity with lower competition and moderate views</li>
+                        <li>Data note: Instagram/TikTok/X findings based on Kaggle simulation — validate with real platform data before final budget allocation</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools -->
+    <section class="tools-used">
+        <div class="container">
+            <h2 class="section-title">Technical Stack & Data Sources</h2>
+            <div class="tools-grid">
+                <span class="tool-badge">Python</span>
+                <span class="tool-badge">Pandas</span>
+                <span class="tool-badge">YouTube Data API v3</span>
+                <span class="tool-badge">Google Trends API</span>
+                <span class="tool-badge">Tableau</span>
+                <span class="tool-badge">Kaggle</span>
+                <span class="tool-badge">Jupyter Notebooks</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Links -->
+    <section class="project-links">
+        <div class="container">
+            <h2 class="section-title">Project Assets</h2>
+            <div class="links-container">
+                <!-- Replace # with your Tableau Public URL once published -->
+                <a href="#" target="_blank" class="project-link">
+                    View Interactive Dashboard
+                </a>
+                <!-- Replace # with your Google Colab or GitHub notebook URL -->
+                <a href="#" target="_blank" class="project-link secondary">
+                    View Analysis Code
+                </a>
+                <a href="index.html" class="project-link secondary">
+                    ← Back to Portfolio
+                </a>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
