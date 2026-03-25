@@ -121,7 +121,7 @@
             color: var(--text-light);
             max-width: 650px;
             line-height: 1.8;
-            margin-bottom: 0;
+            margin-bottom: 2.5rem;
         }
  
         .cta-button {
@@ -134,8 +134,6 @@
             font-weight: 600;
             transition: all 0.3s;
             border: 2px solid var(--primary);
-            margin-top: 2.5rem;
-            clear: both;
         }
  
         .cta-button:hover {
@@ -635,6 +633,7 @@
             <p class="subtitle">Freelance data analyst helping retail, food, and service businesses turn data into clear, revenue-driving strategies</p>
             <p class="description">
                 I work with customer-driven businesses to uncover what's working, what's not, and where the biggest growth opportunities lie. From customer behavior and sales performance to market research and content strategy, I turn data into actionable recommendations that drive real business outcomes. My goal is simple: give you the clarity to make confident decisions and invest your resources where they'll actually move the needle.
+            </p>
             <a href="#contact" class="cta-button">Let's Work Together</a>
         </div>
     </section>
@@ -741,15 +740,15 @@
  
             <div class="about-content">
                 <div class="about-text">
-                    <h3>Data Analyst | Food & Beverage Specialist</h3>
+                    <h3>Data Analyst | Small Business Specialist</h3>
                     <p>
-                        <strong>I'm Jane Ho, a freelance data analyst specializing in the food and service industry.</strong> With hands-on experience managing a boba tea shop and delivering analytics consulting for restaurant startups, I understand both the data and the business context behind it.
+                        <strong>I'm Jane Ho, a freelance data analyst with 10 years of hands-on business operations experience before moving into data.</strong> That background means I don't just analyze numbers in isolation — I understand the operational reality behind them, and I know how to present insights that business owners actually act on.
                     </p>
                     <p>
-                        My unique advantage: I've worked both sides—managing daily operations and solving business problems with data. This means I don't just analyze numbers; I know which metrics actually matter for restaurants and how to present insights that lead to real operational improvements.
+                        My work spans retail sales optimization, customer segmentation, location feasibility, and social media strategy — across food & beverage, e-commerce, and content businesses. Whatever industry you're in, if you have data and a growth question, I can help you answer it.
                     </p>
                     <p>
-                        <strong>What I deliver:</strong> Sales optimization strategies, customer behavior insights, location feasibility studies, inventory management recommendations, and staffing optimization—all tailored to food and service businesses looking to grow profitably.
+                        <strong>What I deliver:</strong> Customer behavior insights, market entry analysis, sales performance optimization, content strategy research, and financial modeling — all tailored to businesses that want to grow without guessing.
                     </p>
                 </div>
  
@@ -860,7 +859,7 @@
         </div>
     </footer>
  
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
@@ -878,4 +877,12 @@
         // Form submission feedback
         const form = document.querySelector('.contact-form form');
         if (form) {
-            form.addEventListener('su
+            form.addEventListener('submit', function(e) {
+                const button = form.querySelector('.submit-button');
+                button.textContent = 'Sending...';
+                button.style.opacity = '0.8';
+            });
+        }
+    </script>
+</body>
+</html>
