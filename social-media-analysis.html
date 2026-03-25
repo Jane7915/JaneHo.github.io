@@ -18,39 +18,39 @@
             --border: #E8E3D5;
             --card-bg: #FFFFFF;
         }
-
+ 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+ 
         body {
             font-family: 'Nunito', sans-serif;
             background: var(--bg);
             color: var(--text);
             line-height: 1.6;
         }
-
+ 
         .container {
             max-width: 1400px;
             margin: 0 auto;
             padding: 0 2rem;
         }
-
+ 
         nav {
             background: rgba(254, 253, 248, 0.95);
             backdrop-filter: blur(10px);
             border-bottom: 1px solid var(--border);
             padding: 1.5rem 0;
         }
-
+ 
         nav .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
-
+ 
         .logo {
             font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
@@ -58,22 +58,22 @@
             color: var(--primary);
             text-decoration: none;
         }
-
+ 
         .back-link {
             color: var(--text);
             text-decoration: none;
             font-weight: 600;
             transition: color 0.3s;
         }
-
+ 
         .back-link:hover {
             color: var(--primary);
         }
-
+ 
         .project-header {
             padding: 4rem 0 2rem;
         }
-
+ 
         .project-tag {
             display: inline-block;
             background: rgba(45, 80, 22, 0.1);
@@ -84,7 +84,7 @@
             font-weight: 600;
             margin-bottom: 1.5rem;
         }
-
+ 
         .project-header h1 {
             font-family: 'Outfit', sans-serif;
             font-size: 3rem;
@@ -92,7 +92,7 @@
             margin-bottom: 1rem;
             font-weight: 700;
         }
-
+ 
         .project-meta {
             display: flex;
             gap: 2rem;
@@ -101,14 +101,14 @@
             margin-bottom: 2rem;
             flex-wrap: wrap;
         }
-
+ 
         .project-description {
             font-size: 1.2rem;
             color: var(--text-light);
             max-width: 900px;
             line-height: 1.8;
         }
-
+ 
         .problem-statement {
             background: rgba(232, 117, 26, 0.08);
             border-left: 4px solid var(--accent);
@@ -116,7 +116,7 @@
             border-radius: 8px;
             margin: 1.5rem 0;
         }
-
+ 
         .problem-statement h2 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
@@ -124,19 +124,19 @@
             margin-bottom: 0.75rem;
             font-weight: 600;
         }
-
+ 
         .problem-statement p {
             color: var(--text-light);
             font-size: 1.1rem;
             line-height: 1.8;
         }
-
+ 
         .details-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 3rem;
         }
-
+ 
         .details-section h3 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.4rem;
@@ -144,12 +144,12 @@
             margin-bottom: 1rem;
             font-weight: 600;
         }
-
+ 
         .details-section ul {
             list-style: none;
             padding: 0;
         }
-
+ 
         .details-section li {
             padding: 0.7rem 0;
             color: var(--text-light);
@@ -157,7 +157,7 @@
             position: relative;
             padding-left: 1.5rem;
         }
-
+ 
         .details-section li::before {
             content: "→";
             position: absolute;
@@ -165,7 +165,7 @@
             color: var(--primary);
             font-weight: bold;
         }
-
+ 
         .key-results {
             background: white;
             padding: 2rem;
@@ -173,7 +173,7 @@
             border: 1px solid var(--border);
             margin: 2rem 0;
         }
-
+ 
         .key-results h2 {
             font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
@@ -181,13 +181,13 @@
             margin-bottom: 1.5rem;
             font-weight: 600;
         }
-
+ 
         .results-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1.5rem;
         }
-
+ 
         .result-card {
             text-align: center;
             padding: 1.5rem;
@@ -195,7 +195,7 @@
             border-radius: 8px;
             border: 1px solid var(--border);
         }
-
+ 
         .result-number {
             font-family: 'Outfit', sans-serif;
             font-size: 2.5rem;
@@ -203,16 +203,16 @@
             font-weight: 700;
             margin-bottom: 0.5rem;
         }
-
+ 
         .result-label {
             color: var(--text-light);
             font-size: 0.9rem;
         }
-
+ 
         .tableau-section {
             padding: 2rem 0 4rem;
         }
-
+ 
         .section-title {
             font-family: 'Outfit', sans-serif;
             font-size: 2rem;
@@ -220,13 +220,13 @@
             margin-bottom: 1rem;
             font-weight: 600;
         }
-
+ 
         .section-subtitle {
             color: var(--text-light);
             font-size: 1.1rem;
             margin-bottom: 2rem;
         }
-
+ 
         .tableau-container {
             background: white;
             padding: 2rem;
@@ -234,7 +234,7 @@
             border: 1px solid var(--border);
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
         }
-
+ 
         /* Placeholder shown before Tableau URL is added */
         .tableau-placeholder {
             background: linear-gradient(135deg, rgba(45, 80, 22, 0.05) 0%, rgba(232, 117, 26, 0.05) 100%);
@@ -244,17 +244,17 @@
             text-align: center;
             color: var(--text-light);
         }
-
+ 
         .tableau-placeholder p {
             font-size: 1rem;
             margin-top: 0.5rem;
         }
-
+ 
         .tableau-placeholder .placeholder-icon {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
-
+ 
         .project-details {
             padding: 3rem 0;
             background: white;
@@ -262,21 +262,21 @@
             border-radius: 12px;
             border: 1px solid var(--border);
         }
-
+ 
         .project-details .container {
             padding: 2rem 4rem;
         }
-
+ 
         .tools-used {
             padding: 2rem 0 3rem;
         }
-
+ 
         .tools-grid {
             display: flex;
             gap: 1rem;
             flex-wrap: wrap;
         }
-
+ 
         .tool-badge {
             background: var(--primary);
             color: white;
@@ -285,19 +285,19 @@
             font-weight: 600;
             font-size: 1rem;
         }
-
+ 
         .project-links {
             padding: 2rem 0 4rem;
             text-align: center;
         }
-
+ 
         .links-container {
             display: flex;
             gap: 1.5rem;
             justify-content: center;
             flex-wrap: wrap;
         }
-
+ 
         .project-link {
             display: inline-block;
             background: var(--primary);
@@ -308,23 +308,23 @@
             font-weight: 600;
             transition: all 0.3s;
         }
-
+ 
         .project-link:hover {
             background: var(--primary-light);
             transform: translateY(-2px);
             box-shadow: 0 8px 20px rgba(45, 80, 22, 0.2);
         }
-
+ 
         .project-link.secondary {
             background: white;
             color: var(--primary);
             border: 2px solid var(--primary);
         }
-
+ 
         .project-link.secondary:hover {
             background: var(--bg);
         }
-
+ 
         @media (max-width: 768px) {
             .project-header h1 {
                 font-size: 2rem;
@@ -346,7 +346,7 @@
             <a href="index.html" class="back-link">← Back to Home</a>
         </div>
     </nav>
-
+ 
     <!-- Project Header -->
     <section class="project-header">
         <div class="container">
@@ -357,7 +357,7 @@
                 <span>🏢 Industry: Food & Beverage / Digital Marketing</span>
                 <span>🎯 Focus: Content Strategy & Platform Analysis</span>
             </div>
-
+ 
             <!-- Business Problem -->
             <div class="problem-statement">
                 <h2>Business Problem</h2>
@@ -365,18 +365,18 @@
                     A Seattle-based Japanese food brand needed to understand which content topics, keywords, and social media platforms would generate the highest reach and engagement before investing in a content marketing strategy. Key unknowns included which keywords had the best views-to-engagement ratio, how their YouTube performance compared to industry benchmarks, and whether search interest in ramen content was growing or declining heading into 2026.
                 </p>
             </div>
-
+ 
             <p class="project-description">
                 Collected and analyzed real YouTube API data alongside simulated platform data (Instagram, TikTok, X) to build a two-dashboard content strategy framework. Identified ramen mukbang as the highest-opportunity keyword at 23M average views, confirmed YouTube performance at 145× above the industry benchmark, and tracked rising Google Trends interest in ramen core content through early 2026. Delivered platform-level virality analysis and keyword-level opportunity scoring across 13 tracked search terms.
             </p>
         </div>
     </section>
-
+ 
     <!-- Client Objective + Analytical Approach -->
     <section>
         <div class="container">
             <div class="details-grid" style="margin: 1.5rem 0;">
-
+ 
                 <div class="details-section">
                     <h3>Project Objectives</h3>
                     <ul>
@@ -387,7 +387,7 @@
                         <li>Deliver actionable platform and content recommendations backed by data</li>
                     </ul>
                 </div>
-
+ 
                 <div class="details-section">
                     <h3>Analytical Approach</h3>
                     <ul>
@@ -399,11 +399,11 @@
                         <li>Two-dashboard Tableau build: industry overview + content strategy</li>
                     </ul>
                 </div>
-
+ 
             </div>
         </div>
     </section>
-
+ 
     <!-- Key Results -->
     <section class="container">
         <div class="key-results">
@@ -428,44 +428,118 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Dashboard 1 -->
     <section class="tableau-section">
         <div class="container">
             <h2 class="section-title">Dashboard 1: Industry Overview</h2>
             <p class="section-subtitle">Platform-level engagement comparison, viral rates, and simulated industry patterns across YouTube, Instagram, TikTok, and X</p>
             <div class="tableau-container">
-                <!-- REPLACE the div below with your Tableau embed code once published to Tableau Public -->
-                <div class="tableau-placeholder">
-                    <div class="placeholder-icon">📊</div>
-                    <strong>Tableau Dashboard Coming Soon</strong>
-                    <p>Publish to Tableau Public and replace this section with your embed code.</p>
+                <div class='tableauPlaceholder' id='viz1774405294433' style='position: relative'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='Dashboard 1' src='https://public.tableau.com/static/images/So/SocialMediaAnalysis_17744038719310/Dashboard1/1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='SocialMediaAnalysis_17744038719310/Dashboard1' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/So/SocialMediaAnalysis_17744038719310/Dashboard1/1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                    </object>
                 </div>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1774405294433');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    if (divElement.offsetWidth > 800) {
+                        vizElement.style.width = '100%';
+                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                    } else if (divElement.offsetWidth > 500) {
+                        vizElement.style.width = '100%';
+                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                    } else {
+                        vizElement.style.width = '100%';
+                        vizElement.style.height = '1277px';
+                    }
+                    var scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                </script>
             </div>
         </div>
     </section>
-
+ 
     <!-- Dashboard 2 -->
     <section class="tableau-section" style="padding-top: 0;">
         <div class="container">
             <h2 class="section-title">Dashboard 2: Content Strategy Analysis</h2>
             <p class="section-subtitle">Keyword performance, YouTube benchmark comparison, and Google Trends momentum for Seattle Japanese food content</p>
             <div class="tableau-container">
-                <!-- REPLACE the div below with your Tableau embed code once published to Tableau Public -->
-                <div class="tableau-placeholder">
-                    <div class="placeholder-icon">📈</div>
-                    <strong>Tableau Dashboard Coming Soon</strong>
-                    <p>Publish to Tableau Public and replace this section with your embed code.</p>
+                <div class='tableauPlaceholder' id='viz1774405407738' style='position: relative'>
+                    <noscript>
+                        <a href='#'>
+                            <img alt='Dashboard 2' src='https://public.tableau.com/static/images/So/SocialMediaAnalysis2_17744046248340/Dashboard2/1_rss.png' style='border: none' />
+                        </a>
+                    </noscript>
+                    <object class='tableauViz' style='display:none;'>
+                        <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' />
+                        <param name='embed_code_version' value='3' />
+                        <param name='site_root' value='' />
+                        <param name='name' value='SocialMediaAnalysis2_17744046248340/Dashboard2' />
+                        <param name='tabs' value='no' />
+                        <param name='toolbar' value='yes' />
+                        <param name='static_image' value='https://public.tableau.com/static/images/So/SocialMediaAnalysis2_17744046248340/Dashboard2/1.png' />
+                        <param name='animate_transition' value='yes' />
+                        <param name='display_static_image' value='yes' />
+                        <param name='display_spinner' value='yes' />
+                        <param name='display_overlay' value='yes' />
+                        <param name='display_count' value='yes' />
+                        <param name='language' value='en-US' />
+                    </object>
                 </div>
+                <script type='text/javascript'>
+                    var divElement = document.getElementById('viz1774405407738');
+                    var vizElement = divElement.getElementsByTagName('object')[0];
+                    if (divElement.offsetWidth > 800) {
+                        vizElement.style.minWidth = '1133px';
+                        vizElement.style.maxWidth = '1233px';
+                        vizElement.style.width = '100%';
+                        vizElement.style.minHeight = '687px';
+                        vizElement.style.maxHeight = '787px';
+                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                    } else if (divElement.offsetWidth > 500) {
+                        vizElement.style.minWidth = '1133px';
+                        vizElement.style.maxWidth = '1233px';
+                        vizElement.style.width = '100%';
+                        vizElement.style.minHeight = '687px';
+                        vizElement.style.maxHeight = '787px';
+                        vizElement.style.height = (divElement.offsetWidth * 0.75) + 'px';
+                    } else {
+                        vizElement.style.width = '100%';
+                        vizElement.style.height = '1527px';
+                    }
+                    var scriptElement = document.createElement('script');
+                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+                    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+                </script>
             </div>
         </div>
     </section>
-
+ 
     <!-- Key Findings + Recommendations -->
     <section class="project-details">
         <div class="container">
             <div class="details-grid">
-
+ 
                 <div class="details-section">
                     <h3>Key Findings</h3>
                     <ul>
@@ -477,7 +551,7 @@
                         <li>X (Twitter) leads engagement rate at 20.1% but has a declining user base — Instagram and TikTok offer more sustainable growth</li>
                     </ul>
                 </div>
-
+ 
                 <div class="details-section">
                     <h3>Recommendations & Impact</h3>
                     <ul>
@@ -489,11 +563,11 @@
                         <li>Data note: Instagram/TikTok/X findings based on Kaggle simulation — validate with real platform data before final budget allocation</li>
                     </ul>
                 </div>
-
+ 
             </div>
         </div>
     </section>
-
+ 
     <!-- Tools -->
     <section class="tools-used">
         <div class="container">
@@ -509,14 +583,13 @@
             </div>
         </div>
     </section>
-
+ 
     <!-- Links -->
     <section class="project-links">
         <div class="container">
             <h2 class="section-title">Project Assets</h2>
             <div class="links-container">
-                <!-- Replace # with your Tableau Public URL once published -->
-                <a href="#" target="_blank" class="project-link">
+                <a href="https://public.tableau.com/views/SocialMediaAnalysis_17744038719310/Dashboard1" target="_blank" class="project-link">
                     View Interactive Dashboard
                 </a>
                 <!-- Replace # with your Google Colab or GitHub notebook URL -->
@@ -529,6 +602,6 @@
             </div>
         </div>
     </section>
-
+ 
 </body>
 </html>
