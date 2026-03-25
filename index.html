@@ -39,16 +39,14 @@
             padding: 0 2rem;
         }
  
-        /* Navigation */
+        /* Navigation — dark green bar */
         nav {
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(254, 253, 248, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
+            background: var(--primary);
             z-index: 1000;
-            padding: 1.5rem 0;
+            padding: 1.2rem 0;
         }
  
         nav .container {
@@ -61,7 +59,7 @@
             font-family: 'Outfit', sans-serif;
             font-size: 1.5rem;
             font-weight: 700;
-            color: var(--primary);
+            color: white;
         }
  
         .nav-links {
@@ -71,7 +69,7 @@
         }
  
         .nav-links a {
-            color: var(--primary);
+            color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -79,40 +77,12 @@
         }
  
         .nav-links a:hover {
-            color: var(--primary);
-        }
- 
-        /* Section Header Bar */
-        .section-header-bar {
-            background: var(--primary);
-            padding: 1rem 0;
-            margin-bottom: 0;
-        }
- 
-        .section-header-bar .container {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-        }
- 
-        .section-header-bar span {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: rgba(255, 255, 255, 0.7);
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
- 
-        .section-header-bar .bar-line {
-            flex: 1;
-            height: 1px;
-            background: rgba(255, 255, 255, 0.2);
+            color: white;
         }
  
         /* Hero Section */
         .hero {
-            padding: 6rem 0 6rem;
+            padding: 10rem 0 6rem;
             position: relative;
         }
  
@@ -195,21 +165,22 @@
  
         /* Section Styles */
         section {
-            padding: 6rem 0;
+            padding: 5rem 0;
         }
  
         .section-header {
-            margin-bottom: 4rem;
+            margin-bottom: 3rem;
         }
  
+        /* Section label — dark green text, no background bar */
         .section-tag {
             display: inline-block;
-            color: var(--accent);
-            font-weight: 600;
-            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
         }
  
         .section-title {
@@ -459,7 +430,7 @@
         }
  
         .contact .section-tag {
-            color: var(--accent);
+            color: rgba(255, 255, 255, 0.7);
         }
  
         .contact .section-title,
@@ -692,7 +663,7 @@
     </nav>
  
     <!-- Hero Section -->
-    <section class="hero" style="padding-top: 10rem;">
+    <section class="hero">
         <div class="container">
             <div class="hero-text">
                 <h1>Smarter Business Decisions,<br>Backed by Data</h1>
@@ -708,18 +679,11 @@
         </div>
     </section>
  
-    <!-- Projects Section Header Bar -->
-    <div class="section-header-bar">
-        <div class="container">
-            <span>Portfolio</span>
-            <div class="bar-line"></div>
-        </div>
-    </div>
- 
     <!-- Projects Section -->
     <section id="projects">
         <div class="container">
             <div class="section-header">
+                <span class="section-tag">Portfolio</span>
                 <h2 class="section-title">Featured Projects</h2>
                 <p class="section-description">
                     Real-world data analysis projects showcasing skills in visualization, statistical analysis, and business intelligence across various industries.
@@ -806,18 +770,11 @@
         </div>
     </section>
  
-    <!-- About Section Header Bar -->
-    <div class="section-header-bar">
-        <div class="container">
-            <span>About Me</span>
-            <div class="bar-line"></div>
-        </div>
-    </div>
- 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
+                <span class="section-tag">About Me</span>
                 <h2 class="section-title">Industry Experience Meets Data Skills</h2>
             </div>
  
@@ -825,7 +782,7 @@
                 <div class="about-text">
                     <h3>Data Analyst | Small Business Specialist</h3>
                     <p>
-                        <strong>I'm Jane Ho, a freelance data analyst with 10 years of hands-on business operations experience before moving into data.</strong> That background means I don't just analyze numbers in isolation — I understand the operational reality behind them, and I know how to present insights that business owners actually act on.
+                        <strong>I’m Jane Ho, a freelance data analyst with 10 years of hands-on experience managing restaurant operations before moving into data analytics.</strong> That background means I don’t just analyze numbers in isolation — I understand the operational reality behind them and know how to present insights that business owners can actually act on.
                     </p>
                     <p>
                         My work spans retail sales optimization, customer segmentation, location feasibility, and social media strategy — across food & beverage, e-commerce, and content businesses. Whatever industry you're in, if you have data and a growth question, I can help you answer it.
@@ -868,18 +825,11 @@
         </div>
     </section>
  
-    <!-- Contact Section Header Bar -->
-    <div class="section-header-bar">
-        <div class="container">
-            <span>Get In Touch</span>
-            <div class="bar-line"></div>
-        </div>
-    </div>
- 
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
                 <h2 class="section-title">Let's Discuss Your Project</h2>
                 <p class="section-description">
                     Need help with data analysis for your business? I'd love to discuss how I can help you make better decisions with your data.
@@ -971,4 +921,3 @@
     </script>
 </body>
 </html>
- 
