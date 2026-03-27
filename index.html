@@ -39,7 +39,7 @@
             padding: 0 2rem;
         }
  
-        /* Navigation — dark green bar */
+        /* Navigation */
         nav {
             position: fixed;
             top: 0;
@@ -107,7 +107,7 @@
  
         .hero-text h1 {
             font-family: 'Outfit', sans-serif;
-            font-size: 4rem;
+            font-size: 3.2rem;
             line-height: 1.1;
             margin-bottom: 1.5rem;
             color: var(--primary);
@@ -135,22 +135,22 @@
         }
  
         .hero-headshot img {
-    width: 260px;
-    height: 260px;
-    object-fit: cover;
-    border: 4px solid var(--primary);
-    box-shadow: 0 8px 32px rgba(45, 80, 22, 0.18);
-    display: block;
-    animation: blob 8s ease-in-out infinite;
-}
-
-@keyframes blob {
-    0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-    25%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
-    50%  { border-radius: 50% 60% 30% 60% / 30% 70% 40% 60%; }
-    75%  { border-radius: 40% 60% 50% 30% / 60% 40% 70% 30%; }
-    100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
-}
+            width: 260px;
+            height: 260px;
+            object-fit: cover;
+            border: 4px solid var(--primary);
+            box-shadow: 0 8px 32px rgba(45, 80, 22, 0.18);
+            display: block;
+            animation: blob 8s ease-in-out infinite;
+        }
+ 
+        @keyframes blob {
+            0%   { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            25%  { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+            50%  { border-radius: 50% 60% 30% 60% / 30% 70% 40% 60%; }
+            75%  { border-radius: 40% 60% 50% 30% / 60% 40% 70% 30%; }
+            100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+        }
  
         .cta-button {
             display: inline-block;
@@ -180,23 +180,18 @@
             margin-bottom: 3rem;
         }
  
-        /* Section label — dark green text, no background bar */
         .section-tag {
-    display: inline-block;
-    background: var(--primary);
-    color: white;
-    font-weight: 600;
-    font-size: 0.8rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    margin-bottom: 0.75rem;
-    padding: 0.3rem 1rem;
-    border-radius: 20px;
-}
-        .contact .section-tag {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-}
+            display: inline-block;
+            background: var(--primary);
+            color: white;
+            font-weight: 600;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.75rem;
+            padding: 0.3rem 1rem;
+            border-radius: 20px;
+        }
  
         .section-title {
             font-family: 'Outfit', sans-serif;
@@ -210,6 +205,60 @@
             font-size: 1.1rem;
             color: var(--text-light);
             max-width: 700px;
+        }
+ 
+        /* Services Section */
+        .services {
+            background: white;
+        }
+ 
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+ 
+        .service-card {
+            background: var(--bg);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.8rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            transition: all 0.3s;
+        }
+ 
+        .service-card:hover {
+            border-color: var(--primary-light);
+            box-shadow: 0 4px 20px rgba(45, 80, 22, 0.08);
+            transform: translateY(-3px);
+        }
+ 
+        .service-icon {
+            width: 48px;
+            height: 48px;
+            background: rgba(45, 80, 22, 0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.4rem;
+            flex-shrink: 0;
+        }
+ 
+        .service-info h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.1rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+        }
+ 
+        .service-info p {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            line-height: 1.6;
         }
  
         /* Projects Grid */
@@ -334,11 +383,6 @@
             border: 1px solid rgba(255, 255, 255, 0.4);
         }
  
-        .project-content {
-            padding: 2rem;
-            display: none;
-        }
- 
         .project-tag {
             display: inline-block;
             background: rgba(45, 80, 22, 0.1);
@@ -445,7 +489,8 @@
         }
  
         .contact .section-tag {
-            color: rgba(255, 255, 255, 0.7);
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
         }
  
         .contact .section-title,
@@ -631,6 +676,10 @@
                 font-size: 2rem;
             }
  
+            .services-grid {
+                grid-template-columns: 1fr;
+            }
+ 
             .projects-grid {
                 grid-template-columns: 1fr;
             }
@@ -650,7 +699,6 @@
             }
         }
  
-        /* Coming Soon Badge */
         .coming-soon {
             position: absolute;
             top: 1rem;
@@ -670,6 +718,7 @@
         <div class="container">
             <div class="logo">Data Portfolio</div>
             <ul class="nav-links">
+                <li><a href="#services">Services</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#about">About</a></li>
                 <li><a href="#contact">Contact</a></li>
@@ -682,14 +731,77 @@
         <div class="container">
             <div class="hero-text">
                 <h1>Smarter Business Decisions, Backed by Data</h1>
-                <p class="subtitle">Freelance data analyst helping retail, food, and service businesses turn data into clear, revenue-driving strategies</p>
+                <p class="subtitle">Freelance data analyst helping businesses of all sizes turn data into clear, revenue-driving decisions</p>
                 <p class="description">
-                    I work with customer-driven businesses to uncover what's working, what's not, and where the biggest growth opportunities lie. From customer behavior and sales performance to market research and content strategy, I turn data into actionable recommendations that drive real business outcomes. My goal is simple: give you the clarity to make confident decisions and invest your resources where they'll actually move the needle.
+                    I work with startups, growing businesses, and established operations to uncover what's working, what's not, and where the biggest opportunities lie. From customer behavior and sales performance to market research and content strategy, I turn data into actionable recommendations that drive real business outcomes. My goal is simple: give you the clarity to make confident decisions and invest your resources where they'll have the most impact.
                 </p>
                 <a href="#contact" class="cta-button">Let's Work Together</a>
             </div>
             <div class="hero-headshot">
                 <img src="images/jane.jpg" alt="Jane Ho — Freelance Data Analyst" />
+            </div>
+        </div>
+    </section>
+ 
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Do</span>
+                <h2 class="section-title">Services</h2>
+                <p class="section-description">
+                    From raw data to clear business decisions — here's how I can help.
+                </p>
+            </div>
+ 
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🧹</div>
+                    <div class="service-info">
+                        <h4>Data Cleaning & Preparation</h4>
+                        <p>Turn raw, messy data into clean, structured files ready for analysis</p>
+                    </div>
+                </div>
+ 
+                <div class="service-card">
+                    <div class="service-icon">📋</div>
+                    <div class="service-info">
+                        <h4>Spreadsheet Organization</h4>
+                        <p>Build organized, easy-to-use spreadsheets your whole team can actually understand</p>
+                    </div>
+                </div>
+ 
+                <div class="service-card">
+                    <div class="service-icon">📈</div>
+                    <div class="service-info">
+                        <h4>Sales & Customer Analysis</h4>
+                        <p>Understand who is buying, when, why, and what actions will increase sales</p>
+                    </div>
+                </div>
+ 
+                <div class="service-card">
+                    <div class="service-icon">📊</div>
+                    <div class="service-info">
+                        <h4>Dashboard & Report Creation</h4>
+                        <p>Create visual dashboards and reports that make insights easy to understand</p>
+                    </div>
+                </div>
+ 
+                <div class="service-card">
+                    <div class="service-icon">🔍</div>
+                    <div class="service-info">
+                        <h4>Market Research</h4>
+                        <p>Analyze competitors, customer demand, and growth opportunities before you invest</p>
+                    </div>
+                </div>
+ 
+                <div class="service-card">
+                    <div class="service-icon">💡</div>
+                    <div class="service-info">
+                        <h4>Business Recommendations</h4>
+                        <p>Go beyond charts with clear conclusions and practical next steps</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -762,7 +874,7 @@
                     </div>
                 </div>
  
-                <!-- Project 4 — Social Media Simulation Analysis -->
+                <!-- Project 4 -->
                 <div class="project-card" onclick="window.location.href='social-media-analysis.html'" style="cursor: pointer;">
                     <div class="project-image" style="background-image: url('images/Social_media_dashboard.png'); background-size: contain; background-position: center; background-repeat: no-repeat;">
                         <div class="project-overlay">
@@ -797,10 +909,10 @@
                 <div class="about-text">
                     <h3>Data Analyst | Small Business Specialist</h3>
                     <p>
-                        <strong>I’m Jane Ho, a freelance data analyst with 10 years of hands-on experience managing restaurant operations before moving into data analytics.</strong> That background means I don’t just analyze numbers in isolation — I understand the operational reality behind them and know how to present insights that business owners can actually act on.
+                        <strong>I'm Jane Ho, a freelance data analyst with 10 years of hands-on business operations experience before moving into data.</strong> That background means I don't just analyze numbers in isolation — I understand the operational reality behind them, and I know how to present insights that business owners actually act on.
                     </p>
                     <p>
-                        My work spans retail sales optimization, customer segmentation, location feasibility, and social media strategy — across food & beverage, e-commerce, and content businesses. Whatever industry you're in, if you have data and a growth question, I can help you answer it.
+                        My work spans retail sales optimization, customer segmentation, location feasibility, and social media strategy. I've worked with restaurants, delivery platforms, sports agencies, and small business operations — and I bring that same cross-industry thinking to every new client I work with.
                     </p>
                     <p>
                         <strong>What I deliver:</strong> Customer behavior insights, market entry analysis, sales performance optimization, content strategy research, and financial modeling — all tailored to businesses that want to grow without guessing.
@@ -903,7 +1015,7 @@
     <!-- Brand Summary -->
     <section class="brand-summary">
         <div class="container">
-            <p>I help <em>retail, food, and service businesses</em> turn messy data into clear, actionable strategies. Whether it's operational efficiency, revenue growth, or customer insights, every project is designed to drive <em>real decisions</em> — not just reports.</p>
+            <p>I help <em>businesses at every stage</em> turn messy data into clear, actionable strategies. Whether it's operational efficiency, revenue growth, or customer insights, every project is designed to drive <em>real decisions</em> — not just reports.</p>
         </div>
     </section>
  
